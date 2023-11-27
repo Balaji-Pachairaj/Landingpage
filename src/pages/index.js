@@ -1,8 +1,9 @@
-"use client";
+'use client'
 
 import Companies from "@/components/Companies";
 import CompaniesSmallScreen from "@/components/CompaniesSmallScreen";
 import ContactUs from "@/components/ContactUs";
+import EnrichinglifeSection from "@/components/EnrichinglifeSection";
 import Logosection from "@/components/Logosection";
 import Meetourteam from "@/components/Meetourteam";
 import Thankyou from "@/components/Thankyou";
@@ -16,6 +17,8 @@ export default function Home() {
      return (
           <>
                <Logosection />
+
+               <EnrichinglifeSection />
 
                <Companies />
                <CompaniesSmallScreen />

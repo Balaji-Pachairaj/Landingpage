@@ -1,10 +1,10 @@
-"use client";
+'use client'
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 
 const ThankyouNote = () => {
      return (
-          <div className=" w-max h-full flex flex-col justify-center text-[35px] font-bold capitalize">
+          <div className=" w-max h-full flex flex-col justify-center text-white text-[35px] font-bold capitalize">
                thank you for your visit!
           </div>
      );
@@ -45,7 +45,7 @@ const Thankyou = () => {
                                    y: "-90%",
                                    rotate: "6deg",
                               }}
-                              className=" w-max h-[95px] lg:rotate-[-25deg] rotate-[6deg]  flex flex-row gap-[4rem] bg-yellow-500 absolute"
+                              className=" w-max h-[95px] lg:rotate-[-25deg] rotate-[6deg]  flex flex-row gap-[4rem] bg-dharangradient absolute"
                          >
                               <ThankyouNote />
                               <ThankyouNote />
@@ -72,7 +72,7 @@ const Thankyou = () => {
                                    x: "-50%",
                                    left: greenleft,
                               }}
-                              className=" w-max  h-[95px] flex flex-row gap-[4rem] bg-green-500 absolute"
+                              className=" w-max  h-[95px] flex flex-row gap-[4rem] bg-dharangradient bg-green-500 absolute"
                          >
                               <ThankyouNote />
                               <ThankyouNote />

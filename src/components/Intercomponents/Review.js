@@ -1,7 +1,8 @@
-"useclient";
+'use client'
 import React, { useRef } from "react";
 import SingleCompanies from "./SingleCompanies";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { timeline } from "@/asset/companies";
 
 const Review = () => {
      const firstComRef = useRef();
@@ -91,6 +92,50 @@ const Review = () => {
      //-------------------------------------------------------------
      //-------------------------------------------------------------
 
+     const fivethComRef = useRef();
+
+     const fivethComUseScroll = useScroll({
+          target: fivethComRef,
+          offset: ["0 1", "1 0.5"],
+     });
+
+     const xfivethCom = useTransform(
+          fivethComUseScroll.scrollYProgress,
+          [0, 0.5, 1],
+          ["100%", "0%", "-100%"]
+     );
+
+     const scalefivethCom = useTransform(
+          fivethComUseScroll.scrollYProgress,
+          [0, 0.5, 0.7, 0.85, 1],
+          [1, 1, 0.8, 0.6, 0.4]
+     );
+
+     //-------------------------------------------------------------
+     //-------------------------------------------------------------
+
+     const sixthComRef = useRef();
+
+     const sixthComUseScroll = useScroll({
+          target: sixthComRef,
+          offset: ["0 1", "1 0.5"],
+     });
+
+     const xsixthCom = useTransform(
+          sixthComUseScroll.scrollYProgress,
+          [0, 0.5, 1],
+          ["100%", "0%", "-100%"]
+     );
+
+     const scalesixthCom = useTransform(
+          sixthComUseScroll.scrollYProgress,
+          [0, 0.5, 0.7, 0.85, 1],
+          [1, 1, 0.8, 0.6, 0.4]
+     );
+
+     //-------------------------------------------------------------
+     //-------------------------------------------------------------
+
      const lastbeforeComRef = useRef();
 
      const lastbeforeComUseScroll = useScroll({
@@ -172,23 +217,25 @@ const Review = () => {
 
      const color = useTransform(fullUseScroll.scrollYProgress, (pos) => {
           // rgb(171, 52, 40)
-          let color7 = [171, 52, 40];
+          let color9 = [171, 52, 40];
           let color1 = [256, 256, 256];
           //rgb(209, 195, 122);
-          let color2 = [209, 195, 122];
+          let color2 = [0, 189, 148];
           //rgb(5, 47, 95);
-          let color3 = [5, 47, 95];
+          let color3 = [256, 256, 256];
           //rgb(1, 8, 16)
-          let color4 = [1, 8, 16];
+          let color4 = [0, 189, 148];
           //rgb(123, 119, 110);
-          let color5 = [123, 119, 110];
+          let color5 = [256, 256, 256];
           //rgb(237, 161, 9)
-          let color6 = [256, 256, 256];
+          let color6 = [0, 189, 148];
           //   let color6 = [237, 161, 9];
-
+          let color7 = [256, 256, 256];
+          //rgb(237, 161, 9)
+          let color8 = [256, 256, 256];
           let position = pos * 100;
 
-          let totalslice = 6;
+          let totalslice = 8;
 
           let ifpass = 100 / totalslice;
 
@@ -260,6 +307,28 @@ const Review = () => {
                console.log(o);
                return o;
           }
+          if (position <= ifpass * 6) {
+               let passposition = (position - ifpass * 5) * totalslice;
+               let p1 = colorchanged(color6[0], color7[0], passposition);
+               let p2 = colorchanged(color6[1], color7[1], passposition);
+               let p3 = colorchanged(color6[2], color7[2], passposition);
+
+               let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
+
+               console.log(o);
+               return o;
+          }
+          if (position <= ifpass * 7) {
+               let passposition = (position - ifpass * 6) * totalslice;
+               let p1 = colorchanged(color7[0], color8[0], passposition);
+               let p2 = colorchanged(color7[1], color8[1], passposition);
+               let p3 = colorchanged(color7[2], color8[2], passposition);
+
+               let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
+
+               console.log(o);
+               return o;
+          }
      });
 
      return (
@@ -278,6 +347,9 @@ const Review = () => {
                                         x: xfirstCom,
                                         scale: scaleFirstCom,
                                    }}
+                                   image={timeline[0].image}
+                                   detail={timeline[0].detail}
+                                   time={timeline[0].time}
                               />
                               <SingleCompanies
                                    style={{
@@ -285,6 +357,9 @@ const Review = () => {
                                         x: xsecondCom,
                                         scale: scalesecondCom,
                                    }}
+                                   image={timeline[1].image}
+                                   detail={timeline[1].detail}
+                                   time={timeline[1].time}
                               />
                               <SingleCompanies
                                    style={{
@@ -292,6 +367,9 @@ const Review = () => {
                                         x: xthirdCom,
                                         scale: scalethirdCom,
                                    }}
+                                   image={timeline[2].image}
+                                   detail={timeline[2].detail}
+                                   time={timeline[2].time}
                               />
                               <SingleCompanies
                                    style={{
@@ -299,13 +377,41 @@ const Review = () => {
                                         x: xfourthCom,
                                         scale: scalefourthCom,
                                    }}
+                                   image={timeline[3].image}
+                                   detail={timeline[3].detail}
+                                   time={timeline[3].time}
                               />
+
+                              <SingleCompanies
+                                   style={{
+                                        y: "-50%",
+                                        x: xfivethCom,
+                                        scale: scalefivethCom,
+                                   }}
+                                   image={timeline[4].image}
+                                   detail={timeline[4].detail}
+                                   time={timeline[4].time}
+                              />
+                              <SingleCompanies
+                                   style={{
+                                        y: "-50%",
+                                        x: xsixthCom,
+                                        scale: scalesixthCom,
+                                   }}
+                                   image={timeline[5].image}
+                                   detail={timeline[5].detail}
+                                   time={timeline[5].time}
+                              />
+
                               <SingleCompanies
                                    style={{
                                         y: "-50%",
                                         x: xlastbeforeCom,
                                         scale: scalelastbeforeCom,
                                    }}
+                                   image={timeline[6].image}
+                                   detail={timeline[6].detail}
+                                   time={timeline[6].time}
                               />
                               <SingleCompanies
                                    style={{
@@ -313,20 +419,9 @@ const Review = () => {
                                         x: xlastCom,
                                         scale: scalelastCom,
                                    }}
-                              />
-                              <SingleCompanies
-                                   style={{
-                                        y: "-50%",
-                                        x: xthirdCom,
-                                        scale: scalethirdCom,
-                                   }}
-                              />
-                              <SingleCompanies
-                                   style={{
-                                        y: "-50%",
-                                        x: xfourthCom,
-                                        scale: scalefourthCom,
-                                   }}
+                                   image={timeline[7].image}
+                                   detail={timeline[7].detail}
+                                   time={timeline[7].time}
                               />
                          </div>
                     </motion.div>
@@ -352,6 +447,16 @@ const Review = () => {
                               ></div>
                               <div
                                    ref={fourthComRef}
+                                   className="w-full h-[50%]  "
+                              ></div>
+                         </div>
+                         <div className="w-full h-screen">
+                              <div
+                                   ref={fivethComRef}
+                                   className="w-full h-[50%] "
+                              ></div>
+                              <div
+                                   ref={sixthComRef}
                                    className="w-full h-[50%]  "
                               ></div>
                          </div>

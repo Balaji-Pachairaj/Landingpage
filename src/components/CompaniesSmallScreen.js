@@ -1,9 +1,10 @@
-"use client";
+'use client'
+import { companies } from "@/asset/companies";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import React, { useRef } from "react";
 
-const SingleCom = ({ src }) => {
+const SingleCom = ({ src, name }) => {
      return (
           <div className=" w-full h-screen flex flex-col justify-center items-center ">
                <a
@@ -11,15 +12,10 @@ const SingleCom = ({ src }) => {
                     target="blank"
                     className=" w-[80vw] h-[80vw]  rounded-[10vw]  relative overflow-hidden "
                >
-                    <Image
-                         loader={() => src}
-                         src={src}
-                         fill
-                         objectFit="cover"
-                    />
+                    <Image src={src} fill objectFit="cover" />
                </a>
                <div className=" ps-[7%] pe-[7%] text-center text-[7vw] font-bold mt-[1rem]">
-                    PROJECT NAME
+                    {name}
                </div>
                <p className=" lg:text-[1rem] md:text-[0.7rem]  w-[40%] text-center">
                     Product Design, UIUX Design, Branding, Visual Design, Art
@@ -48,11 +44,11 @@ const CompaniesSmallScreen = () => {
 
      const fullUseScroll = useScroll({
           target: fullRef,
-          offset: ["0 0.5", "1 1"],
+          offset: ["0 1", "1 1"],
      });
 
      const colorchanged = (c1, c2, percentage) => {
-          if (c1 == c2) return;
+          if (c1 == c2) return c1;
           let max = c1 > c2 ? c1 : c2;
           let small = c1 > c2 ? c2 : c1;
 
@@ -86,32 +82,42 @@ const CompaniesSmallScreen = () => {
           let color1 = [256, 256, 256];
 
           //rgb(209, 195, 122);
-          let color2 = [255, 143, 64];
-          let color3 = [255, 143, 64];
+          let color2 = companies[0].color;
+          let color3 = companies[0].color;
           //rgb(144, 238, 144)
-          let color4 = [144, 238, 144];
-          let color5 = [144, 238, 144];
+          let color4 = companies[1].color;
+          let color5 = companies[1].color;
           //rgb(123, 119, 110);
-          let color6 = [0, 0, 0];
-          let color7 = [0, 0, 0];
+          let color6 = companies[2].color;
+          let color7 = companies[2].color;
 
           //255, 182, 193
-          let color8 = [255, 182, 193];
-          let color9 = [256, 256, 256];
+          let color8 = companies[3].color;
+          let color9 = companies[3].color;
+
+          //255, 182, 193
+          let color10 = companies[4].color;
+          let color11 = companies[4].color;
+
+          //255, 182, 193
+          let color12 = companies[5].color;
+          let color13 = companies[5].color;
+
+          //255, 182, 193
+          let color14 = companies[6].color;
+          let color15 = companies[6].color;
 
           let position = pos * 100;
 
-          let totalslice = 8;
+          let totalslice = 14;
 
           let ifpass = 100 / totalslice;
 
           let passpositionpass = position * totalslice;
 
-          console.log(ifpass);
-
-          //   if (pos == 1) {
-          //        return "rgb(0,0,0 )";
-          //   }
+          if (pos == 1) {
+               return "rgb(256,256,256 )";
+          }
 
           if (position <= ifpass * 1) {
                let passposition = (position - ifpass * 0) * totalslice;
@@ -120,8 +126,6 @@ const CompaniesSmallScreen = () => {
                let p3 = colorchanged(color1[2], color2[2], passposition);
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
-
-               console.log(o);
 
                return o;
           }
@@ -134,7 +138,6 @@ const CompaniesSmallScreen = () => {
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
 
-               console.log(o);
                return o;
           }
 
@@ -148,7 +151,6 @@ const CompaniesSmallScreen = () => {
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
 
-               console.log(o);
                return o;
           }
 
@@ -160,7 +162,6 @@ const CompaniesSmallScreen = () => {
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
 
-               console.log(o);
                return o;
           }
 
@@ -174,7 +175,6 @@ const CompaniesSmallScreen = () => {
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
 
-               console.log(o);
                return o;
           }
 
@@ -186,7 +186,6 @@ const CompaniesSmallScreen = () => {
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
 
-               console.log(o);
                return o;
           }
           //-----------------------------------------------------------
@@ -214,6 +213,72 @@ const CompaniesSmallScreen = () => {
                console.log(o);
                return o;
           }
+          if (position <= ifpass * 9) {
+               let passposition = (position - ifpass * 8) * totalslice;
+               let p1 = colorchanged(color9[0], color10[0], passposition);
+               let p2 = colorchanged(color9[1], color10[1], passposition);
+               let p3 = colorchanged(color9[2], color10[2], passposition);
+
+               let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
+
+               console.log(o);
+               return o;
+          }
+          if (position <= ifpass * 10) {
+               let passposition = (position - ifpass * 9) * totalslice;
+               let p1 = colorchanged(color10[0], color11[0], passposition);
+               let p2 = colorchanged(color10[1], color11[1], passposition);
+               let p3 = colorchanged(color10[2], color11[2], passposition);
+
+               let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
+
+               console.log(o);
+               return o;
+          }
+          if (position <= ifpass * 11) {
+               let passposition = (position - ifpass * 10) * totalslice;
+               let p1 = colorchanged(color11[0], color12[0], passposition);
+               let p2 = colorchanged(color11[1], color12[1], passposition);
+               let p3 = colorchanged(color11[2], color12[2], passposition);
+
+               let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
+
+               console.log(o);
+               return o;
+          }
+          if (position <= ifpass * 12) {
+               let passposition = (position - ifpass * 11) * totalslice;
+               let p1 = colorchanged(color12[0], color13[0], passposition);
+               let p2 = colorchanged(color12[1], color13[1], passposition);
+               let p3 = colorchanged(color12[2], color13[2], passposition);
+
+               let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
+
+               console.log(o);
+               return o;
+          }
+          if (position <= ifpass * 13) {
+               let passposition = (position - ifpass * 12) * totalslice;
+               let p1 = colorchanged(color13[0], color14[0], passposition);
+               let p2 = colorchanged(color13[1], color14[1], passposition);
+               let p3 = colorchanged(color13[2], color14[2], passposition);
+
+               let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
+
+               console.log(o);
+               return o;
+          }
+          if (position <= ifpass * 14) {
+               let passposition = (position - ifpass * 13) * totalslice;
+               let p1 = colorchanged(color14[0], color15[0], passposition);
+               let p2 = colorchanged(color14[1], color15[1], passposition);
+               let p3 = colorchanged(color14[2], color15[2], passposition);
+
+               let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
+
+               console.log(o);
+               return o;
+          }
      });
 
      return (
@@ -235,10 +300,34 @@ const CompaniesSmallScreen = () => {
                     className=" w-full gap-[8rem] flex flex-col "
                     ref={fullRef}
                >
-                    <SingleCom src={src} />
-                    <SingleCom src={src2} />
-                    <SingleCom src={src3} />
-                    <SingleCom src={src4} />
+                    <SingleCom
+                         src={companies[0].image}
+                         name={companies[0].name}
+                    />
+                    <SingleCom
+                         src={companies[1].image}
+                         name={companies[1].name}
+                    />
+                    <SingleCom
+                         src={companies[2].image}
+                         name={companies[2].name}
+                    />
+                    <SingleCom
+                         src={companies[3].image}
+                         name={companies[3].name}
+                    />
+                    <SingleCom
+                         src={companies[4].image}
+                         name={companies[4].name}
+                    />
+                    <SingleCom
+                         src={companies[5].image}
+                         name={companies[5].name}
+                    />
+                    <SingleCom
+                         src={companies[6].image}
+                         name={companies[6].name}
+                    />
 
                     <div className="w-full h-[50vh]"></div>
                </motion.div>

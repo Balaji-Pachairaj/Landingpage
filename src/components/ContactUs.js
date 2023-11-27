@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 
@@ -30,7 +30,7 @@ const ContactUs = () => {
                          width: widthFull,
                          height: heightFull,
                     }}
-                    className=" w-[100vw] h-[100vh] rounded-[5rem] bg-black flex flex-col justify-center gap-[4vh] text-white"
+                    className=" w-[100vw] h-[100vh] rounded-[5rem] bg-dharangradient flex flex-col justify-center gap-[4vh] text-white"
                >
                     <div className=" text-[7vw] font-bold text-center">Let's Contact</div>
                     <div className=" w-full h-min flex md:flex-row  flex-col items-center justify-center gap-[5vw]">

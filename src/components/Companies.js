@@ -1,4 +1,5 @@
-"useclient";
+'use client'
+import { companies } from "@/asset/companies";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import React, { useRef } from "react";
@@ -121,13 +122,74 @@ const Companies = () => {
           ["100%", "-100%"]
      );
 
-     const detailfourthCom = useTransform(
-          fourthComUseScroll.scrollYProgress,
-          [0, 0.1, 0.6],
-          ["100%", "100%", "-100%"]
-     );
      const titlefourthCom = useTransform(
           fourthComUseScroll.scrollYProgress,
+          [0, 0.23, 0.7],
+          ["100%", "100%", "-100%"]
+     );
+
+     ///-----------------------------------------------------
+     //-----------------------------------------------------------------------------------------
+
+     const fivethComRef = useRef();
+
+     const fivethComUseScroll = useScroll({
+          target: fivethComRef,
+          offset: ["0 1", "1 0.5"],
+     });
+
+     const imagetopfiveth = useTransform(
+          fivethComUseScroll.scrollYProgress,
+          [0, 1],
+          ["100%", "-100%"]
+     );
+
+     const titlefivethCom = useTransform(
+          fivethComUseScroll.scrollYProgress,
+          [0, 0.23, 0.7],
+          ["100%", "100%", "-100%"]
+     );
+
+     ///-----------------------------------------------------
+     //-----------------------------------------------------------------------------------------
+
+     const sixthComRef = useRef();
+
+     const sixthComUseScroll = useScroll({
+          target: sixthComRef,
+          offset: ["0 1", "1 0.5"],
+     });
+
+     const imagetopsixth = useTransform(
+          sixthComUseScroll.scrollYProgress,
+          [0, 1],
+          ["100%", "-100%"]
+     );
+
+     const titlesixthCom = useTransform(
+          sixthComUseScroll.scrollYProgress,
+          [0, 0.23, 0.7],
+          ["100%", "100%", "-100%"]
+     );
+
+     ///-----------------------------------------------------
+     //-----------------------------------------------------------------------------------------
+
+     const seventhComRef = useRef();
+
+     const seventhComUseScroll = useScroll({
+          target: seventhComRef,
+          offset: ["0 1", "1 0.5"],
+     });
+
+     const imagetopseventh = useTransform(
+          seventhComUseScroll.scrollYProgress,
+          [0, 1],
+          ["100%", "-100%"]
+     );
+
+     const titleseventhCom = useTransform(
+          seventhComUseScroll.scrollYProgress,
           [0, 0.23, 0.7],
           ["100%", "100%", "-100%"]
      );
@@ -142,7 +204,7 @@ const Companies = () => {
      });
 
      const colorchanged = (c1, c2, percentage) => {
-          if (c1 == c2) return;
+          if (c1 == c2) return c1;
           let max = c1 > c2 ? c1 : c2;
           let small = c1 > c2 ? c2 : c1;
 
@@ -176,30 +238,42 @@ const Companies = () => {
           let color1 = [256, 256, 256];
 
           //rgb(209, 195, 122);
-          let color2 = [255, 143, 64];
-          let color3 = [255, 143, 64];
+          let color2 = companies[0].color;
+          let color3 = companies[0].color;
           //rgb(144, 238, 144)
-          let color4 = [144, 238, 144];
-          let color5 = [144, 238, 144];
+          let color4 = companies[1].color;
+          let color5 = companies[1].color;
           //rgb(123, 119, 110);
-          let color6 = [256, 256, 256];
-          let color7 = [256, 256, 256];
+          let color6 = companies[2].color;
+          let color7 = companies[2].color;
 
           //255, 182, 193
-          let color8 = [255, 182, 193];
-          let color9 = [256, 256, 256];
+          let color8 = companies[3].color;
+          let color9 = companies[3].color;
+
+          //255, 182, 193
+          let color10 = companies[4].color;
+          let color11 = companies[4].color;
+
+          //255, 182, 193
+          let color12 = companies[5].color;
+          let color13 = companies[5].color;
+
+          //255, 182, 193
+          let color14 = companies[6].color;
+          let color15 = companies[6].color;
 
           let position = pos * 100;
 
-          let totalslice = 8;
+          let totalslice = 14;
 
           let ifpass = 100 / totalslice;
 
           let passpositionpass = position * totalslice;
 
-          //   if (pos == 1) {
-          //        return "rgb(0,0,0 )";
-          //   }
+          if (pos == 1) {
+               return "rgb(256,256,256 )";
+          }
 
           if (position <= ifpass * 1) {
                let passposition = (position - ifpass * 0) * totalslice;
@@ -295,6 +369,72 @@ const Companies = () => {
                console.log(o);
                return o;
           }
+          if (position <= ifpass * 9) {
+               let passposition = (position - ifpass * 8) * totalslice;
+               let p1 = colorchanged(color9[0], color10[0], passposition);
+               let p2 = colorchanged(color9[1], color10[1], passposition);
+               let p3 = colorchanged(color9[2], color10[2], passposition);
+
+               let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
+
+               console.log(o);
+               return o;
+          }
+          if (position <= ifpass * 10) {
+               let passposition = (position - ifpass * 9) * totalslice;
+               let p1 = colorchanged(color10[0], color11[0], passposition);
+               let p2 = colorchanged(color10[1], color11[1], passposition);
+               let p3 = colorchanged(color10[2], color11[2], passposition);
+
+               let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
+
+               console.log(o);
+               return o;
+          }
+          if (position <= ifpass * 11) {
+               let passposition = (position - ifpass * 10) * totalslice;
+               let p1 = colorchanged(color11[0], color12[0], passposition);
+               let p2 = colorchanged(color11[1], color12[1], passposition);
+               let p3 = colorchanged(color11[2], color12[2], passposition);
+
+               let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
+
+               console.log(o);
+               return o;
+          }
+          if (position <= ifpass * 12) {
+               let passposition = (position - ifpass * 11) * totalslice;
+               let p1 = colorchanged(color12[0], color13[0], passposition);
+               let p2 = colorchanged(color12[1], color13[1], passposition);
+               let p3 = colorchanged(color12[2], color13[2], passposition);
+
+               let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
+
+               console.log(o);
+               return o;
+          }
+          if (position <= ifpass * 13) {
+               let passposition = (position - ifpass * 12) * totalslice;
+               let p1 = colorchanged(color13[0], color14[0], passposition);
+               let p2 = colorchanged(color13[1], color14[1], passposition);
+               let p3 = colorchanged(color13[2], color14[2], passposition);
+
+               let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
+
+               console.log(o);
+               return o;
+          }
+          if (position <= ifpass * 14) {
+               let passposition = (position - ifpass * 13) * totalslice;
+               let p1 = colorchanged(color14[0], color15[0], passposition);
+               let p2 = colorchanged(color14[1], color15[1], passposition);
+               let p3 = colorchanged(color14[2], color15[2], passposition);
+
+               let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
+
+               console.log(o);
+               return o;
+          }
      });
 
      const zindexfull = useTransform(
@@ -305,236 +445,334 @@ const Companies = () => {
 
      return (
           <>
-               <motion.div
-                    style={{
-                         top: zindexfull,
-                    }}
-                    className=" lg:block  hidden w-full h-screen  lg:text-[20rem] md:text-[15rem] sm:text-[12rem] text-[7rem]  z-[5] fixed top-0 overflow-hidden bg-white "
-               >
-                    <motion.div
-                         style={{
-                              zIndex: zindexfull,
-                              scale: scaleWorkUseScroll,
-                              backgroundColor: color,
-                         }}
-                         className=" text-center w-full h-full flex flex-row justify-center lg:text-[10rem] md:text-[8rem] sm:text-[6rem] text-[5rem] "
-                    >
-                         OUR COMPANIES
-                    </motion.div>
-               </motion.div>
+               {/* <div className="w-full h-screen"></div> */}
+
                <div
                     ref={workRef}
-                    className=" lg:block hidden w-full min-h-screen "
+                    className=" lg:block hidden w-full h-[1px] "
                ></div>
-
-               <div
-                    className="lg:block hidden w-full min-h-screen "
-                    ref={fullRef}
-               >
-                    {/* companies one */}
+               <div>
                     <div
-                         className=" w-full h-[400vh] flex flex-col justify-center items-center "
-                         ref={firstComRef}
+                         // style={{
+                         //      top: zindexfull,
+                         // }}
+                         className=" lg:block sticky top-0  hidden w-full h-screen  lg:text-[20rem] md:text-[15rem] sm:text-[12rem] text-[7rem]  z-[5] overflow-hidden bg-white "
                     >
-                         <motion.a
-                              href="https://google.com"
-                              target="blank"
+                         <motion.div
                               style={{
-                                   top: imagetopFirst,
-                                   left: "50%",
-                                   x: "-50%",
+                                   backgroundColor: color,
                               }}
-                              className=" w-[81vh] h-[81vh] bg-red-700 rounded-[10vh] fixed overflow-hidden z-[8]"
+                              className=" text-center pt-[1%] w-full h-full flex flex-row justify-center lg:text-[10rem] md:text-[8rem] sm:text-[6rem] text-[5rem] "
                          >
-                              <Image
-                                   loader={() => src}
-                                   src={src}
-                                   fill
-                                   objectFit="cover"
-                              />
-                         </motion.a>
+                              OUR COMPANIES
+                         </motion.div>
+                    </div>
+                    <div
+                         className="lg:block hidden w-full min-h-screen "
+                         ref={fullRef}
+                    >
+                         {/* companies one */}
+                         <div
+                              className=" w-full h-[400vh] flex flex-col justify-center items-center "
+                              ref={firstComRef}
+                         >
+                              <motion.a
+                                   href="https://google.com"
+                                   target="blank"
+                                   style={{
+                                        top: imagetopFirst,
+                                        left: "50%",
+                                        x: "-50%",
+                                   }}
+                                   className=" w-[81vh] h-[81vh] bg-red-700 rounded-[10vh] fixed overflow-hidden z-[8]"
+                              >
+                                   <Image
+                                        src={companies[0].image}
+                                        fill
+                                        objectFit="cover"
+                                   />
+                              </motion.a>
 
-                         {/* <motion.div
+                              {/* <motion.div
                               style={{
                                    left: detailfirstCom,
                               }}
                               className="  w-full h-[50vh] fixed top-[50%] z-[7] flex flex-row justify-center items-center"
                          ></motion.div> */}
 
-                         <motion.div
-                              style={{
-                                   left: titlefirstCom,
-                              }}
-                              className=" w-full h-[50vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
-                         >
-                              <p className=" lg:text-[6rem] md:text-[5rem] font-bold">
-                                   PROJECT NAME
-                              </p>
-                              <p className=" lg:text-[1rem] md:text-[0.7rem]  w-[40%] text-center">
-                                   Product Design, UIUX Design, Branding, Visual
-                                   Design, Art Direction, Concept Design for
-                                   Spotify
-                              </p>
-                         </motion.div>
-                    </div>
+                              <motion.div
+                                   style={{
+                                        left: titlefirstCom,
+                                   }}
+                                   className=" w-full h-[50vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
+                              >
+                                   <p className=" lg:text-[6rem] md:text-[5rem] font-bold">
+                                        {companies[0].name}
+                                   </p>
+                                   <p className=" lg:text-[1rem] md:text-[0.7rem]  w-[40%] text-center">
+                                        Product Design, UIUX Design, Branding,
+                                        Visual Design, Art Direction, Concept
+                                        Design for Spotify
+                                   </p>
+                              </motion.div>
+                         </div>
 
-                    {/* companies two */}
-                    <div
-                         className=" w-full h-[400vh] flex flex-col justify-center items-center "
-                         ref={secondComRef}
-                    >
-                         <motion.a
-                              href="https://google.com"
-                              target="blank"
-                              style={{
-                                   top: imagetopsecond,
-                                   left: "50%",
-                                   x: "-50%",
-                              }}
-                              className=" w-[81vh] h-[81vh] bg-red-700 rounded-[10vh] fixed overflow-hidden z-[8]"
+                         {/* companies two */}
+                         <div
+                              className=" w-full h-[400vh] flex flex-col justify-center items-center "
+                              ref={secondComRef}
                          >
-                              <Image
-                                   loader={() => src2}
-                                   src={src2}
-                                   fill
-                                   objectFit="cover"
-                              />
-                         </motion.a>
+                              <motion.a
+                                   href="https://google.com"
+                                   target="blank"
+                                   style={{
+                                        top: imagetopsecond,
+                                        left: "50%",
+                                        x: "-50%",
+                                   }}
+                                   className=" w-[81vh] h-[81vh] bg-red-700 rounded-[10vh] fixed overflow-hidden z-[8]"
+                              >
+                                   <Image
+                                        src={companies[1].image}
+                                        fill
+                                        objectFit="cover"
+                                   />
+                              </motion.a>
 
-                         {/* <motion.div
+                              {/* <motion.div
                               style={{
                                    left: detailsecondCom,
                               }}
                               className="  w-full h-[50vh] fixed top-[50%] z-[7] flex flex-row justify-center items-center"
-                         >
+                              >
                               <p className=" lg:text-[1rem] md:text-[0.7rem]  w-[15%]">
-                                   Product Design, UIUX Design, Branding, Visual
-                                   Design, Art Direction, Concept Design for
-                                   Spotify
+                              Product Design, UIUX Design, Branding, Visual
+                              Design, Art Direction, Concept Design for
+                              Spotify
                               </p>
                          </motion.div> */}
 
-                         <motion.div
-                              style={{
-                                   left: titlesecondCom,
-                              }}
-                              className=" w-full h-[50vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
-                         >
-                              <p className=" lg:text-[6rem] md:text-[5rem] font-bold">
-                                   PROJECT NAME
-                              </p>
-                              <p className=" lg:text-[1rem] md:text-[0.7rem]  w-[40%] text-center">
-                                   Product Design, UIUX Design, Branding, Visual
-                                   Design, Art Direction, Concept Design for
-                                   Spotify
-                              </p>
-                         </motion.div>
-                    </div>
+                              <motion.div
+                                   style={{
+                                        left: titlesecondCom,
+                                   }}
+                                   className=" w-full h-[50vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
+                              >
+                                   <p className=" lg:text-[6rem] md:text-[5rem] font-bold">
+                                        {companies[1].name}
+                                   </p>
+                                   <p className=" lg:text-[1rem] md:text-[0.7rem]  w-[40%] text-center">
+                                        Product Design, UIUX Design, Branding,
+                                        Visual Design, Art Direction, Concept
+                                        Design for Spotify
+                                   </p>
+                              </motion.div>
+                         </div>
 
-                    {/* companies three */}
-                    <div
-                         className=" w-full h-[400vh] flex flex-col justify-center items-center "
-                         ref={thirdComRef}
-                    >
-                         <motion.a
-                              href="https://google.com"
-                              target="blank"
-                              style={{
-                                   top: imagetopthird,
-                                   left: "50%",
-                                   x: "-50%",
-                              }}
-                              className=" w-[81vh] h-[81vh] bg-red-700 rounded-[10vh] fixed overflow-hidden z-[8]"
+                         {/* companies three */}
+                         <div
+                              className=" w-full h-[400vh] flex flex-col justify-center items-center "
+                              ref={thirdComRef}
                          >
-                              <Image
-                                   loader={() => src3}
-                                   src={src3}
-                                   fill
-                                   objectFit="cover"
-                              />
-                         </motion.a>
+                              <motion.a
+                                   href="https://google.com"
+                                   target="blank"
+                                   style={{
+                                        top: imagetopthird,
+                                        left: "50%",
+                                        x: "-50%",
+                                   }}
+                                   className=" w-[81vh] h-[81vh] bg-red-700 rounded-[10vh] fixed overflow-hidden z-[8]"
+                              >
+                                   <Image
+                                        src={companies[2].image}
+                                        fill
+                                        objectFit="cover"
+                                   />
+                              </motion.a>
 
-                         {/* <motion.div
+                              {/* <motion.div
                               style={{
                                    left: detailthirdCom,
                               }}
                               className="  w-full h-[50vh] fixed top-[50%] z-[7] flex flex-row justify-center items-center"
-                         >
+                              >
                               <p className=" lg:text-[1rem] md:text-[0.7rem]  w-[15%]">
-                                   Product Design, UIUX Design, Branding, Visual
-                                   Design, Art Direction, Concept Design for
-                                   Spotify
+                              Product Design, UIUX Design, Branding, Visual
+                              Design, Art Direction, Concept Design for
+                              Spotify
                               </p>
                          </motion.div> */}
 
-                         <motion.div
-                              style={{
-                                   left: titlethirdCom,
-                              }}
-                              className=" w-full h-[50vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
-                         >
-                              <p className=" lg:text-[6rem] md:text-[5rem] font-bold">
-                                   PROJECT NAME
-                              </p>
-                              <p className=" lg:text-[1rem] md:text-[0.7rem]  w-[40%] text-center">
-                                   Product Design, UIUX Design, Branding, Visual
-                                   Design, Art Direction, Concept Design for
-                                   Spotify
-                              </p>
-                         </motion.div>
-                    </div>
+                              <motion.div
+                                   style={{
+                                        left: titlethirdCom,
+                                   }}
+                                   className=" w-full h-[50vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
+                              >
+                                   <p className=" lg:text-[6rem] md:text-[5rem] font-bold">
+                                        {companies[2].name}
+                                   </p>
+                                   <p className=" lg:text-[1rem] md:text-[0.7rem]  w-[40%] text-center">
+                                        Product Design, UIUX Design, Branding,
+                                        Visual Design, Art Direction, Concept
+                                        Design for Spotify
+                                   </p>
+                              </motion.div>
+                         </div>
 
-                    {/* companies fourth */}
-                    <div
-                         className=" w-full h-[400vh] flex flex-col justify-center items-center "
-                         ref={fourthComRef}
-                    >
-                         <motion.a
-                              href="https://google.com"
-                              target="blank"
-                              style={{
-                                   top: imagetopfourth,
-                                   left: "50%",
-                                   x: "-50%",
-                              }}
-                              className=" w-[81vh] h-[81vh] bg-red-700 rounded-[10vh] fixed overflow-hidden z-[8]"
+                         {/* companies fourth */}
+                         <div
+                              className=" w-full h-[400vh] flex flex-col justify-center items-center "
+                              ref={fourthComRef}
                          >
-                              <Image
-                                   loader={() => src4}
-                                   src={src4}
-                                   fill
-                                   objectFit="cover"
-                              />
-                         </motion.a>
+                              <motion.a
+                                   href="https://google.com"
+                                   target="blank"
+                                   style={{
+                                        top: imagetopfourth,
+                                        left: "50%",
+                                        x: "-50%",
+                                   }}
+                                   className=" w-[81vh] h-[81vh] bg-red-700 rounded-[10vh] fixed overflow-hidden z-[8]"
+                              >
+                                   <Image
+                                        src={companies[3].image}
+                                        fill
+                                        objectFit="cover"
+                                   />
+                              </motion.a>
 
-                         {/* <motion.div
-                              style={{
-                                   left: detailfourthCom,
-                              }}
-                              className="  w-full h-[50vh] fixed top-[50%] z-[7] flex flex-row justify-center items-center"
+                              <motion.div
+                                   style={{
+                                        left: titlefourthCom,
+                                   }}
+                                   className=" w-full h-[50vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
+                              >
+                                   <p className=" lg:text-[6rem] md:text-[5rem] font-bold">
+                                        {companies[3].name}
+                                   </p>
+                                   <p className=" lg:text-[1rem] md:text-[0.7rem]  w-[40%] text-center">
+                                        Product Design, UIUX Design, Branding,
+                                        Visual Design, Art Direction, Concept
+                                        Design for Spotify
+                                   </p>
+                              </motion.div>
+                         </div>
+                         {/* companies fiveth */}
+                         <div
+                              className=" w-full h-[400vh] flex flex-col justify-center items-center "
+                              ref={fivethComRef}
                          >
-                              <p className=" lg:text-[1rem] md:text-[0.7rem]  w-[15%]">
-                                   Product Design, UIUX Design, Branding, Visual
-                                   Design, Art Direction, Concept Design for
-                                   Spotify
-                              </p>
-                         </motion.div> */}
+                              <motion.a
+                                   href="https://google.com"
+                                   target="blank"
+                                   style={{
+                                        top: imagetopfiveth,
+                                        left: "50%",
+                                        x: "-50%",
+                                   }}
+                                   className=" w-[81vh] h-[81vh] bg-red-700 rounded-[10vh] fixed overflow-hidden z-[8]"
+                              >
+                                   <Image
+                                        src={companies[4].image}
+                                        fill
+                                        objectFit="cover"
+                                   />
+                              </motion.a>
 
-                         <motion.div
-                              style={{
-                                   left: titlefourthCom,
-                              }}
-                              className=" w-full h-[50vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
+                              <motion.div
+                                   style={{
+                                        left: titlefivethCom,
+                                   }}
+                                   className=" w-full h-[50vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
+                              >
+                                   <p className=" lg:text-[6rem] md:text-[5rem] font-bold">
+                                        {companies[4].name}
+                                   </p>
+                                   <p className=" lg:text-[1rem] md:text-[0.7rem]  w-[40%] text-center">
+                                        Product Design, UIUX Design, Branding,
+                                        Visual Design, Art Direction, Concept
+                                        Design for Spotify
+                                   </p>
+                              </motion.div>
+                         </div>
+                         {/* companies sixth */}
+                         <div
+                              className=" w-full h-[400vh] flex flex-col justify-center items-center "
+                              ref={sixthComRef}
                          >
-                              <p className=" lg:text-[6rem] md:text-[5rem] font-bold">
-                                   PROJECT NAME
-                              </p>
-                              <p className=" lg:text-[1rem] md:text-[0.7rem]  w-[40%] text-center">
-                                   Product Design, UIUX Design, Branding, Visual
-                                   Design, Art Direction, Concept Design for
-                                   Spotify
-                              </p>
-                         </motion.div>
+                              <motion.a
+                                   href="https://google.com"
+                                   target="blank"
+                                   style={{
+                                        top: imagetopsixth,
+                                        left: "50%",
+                                        x: "-50%",
+                                   }}
+                                   className=" w-[81vh] h-[81vh] bg-red-700 rounded-[10vh] fixed overflow-hidden z-[8]"
+                              >
+                                   <Image
+                                        src={companies[5].image}
+                                        fill
+                                        objectFit="cover"
+                                   />
+                              </motion.a>
+
+                              <motion.div
+                                   style={{
+                                        left: titlesixthCom,
+                                   }}
+                                   className=" w-full h-[50vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
+                              >
+                                   <p className=" lg:text-[6rem] md:text-[5rem] font-bold">
+                                        {companies[5].name}
+                                   </p>
+                                   <p className=" lg:text-[1rem] md:text-[0.7rem]  w-[40%] text-center">
+                                        Product Design, UIUX Design, Branding,
+                                        Visual Design, Art Direction, Concept
+                                        Design for Spotify
+                                   </p>
+                              </motion.div>
+                         </div>
+                         {/* companies seventh */}
+                         <div
+                              className=" w-full h-[400vh] flex flex-col justify-center items-center "
+                              ref={seventhComRef}
+                         >
+                              <motion.a
+                                   href="https://google.com"
+                                   target="blank"
+                                   style={{
+                                        top: imagetopseventh,
+                                        left: "50%",
+                                        x: "-50%",
+                                   }}
+                                   className=" w-[81vh] h-[81vh] bg-red-700 rounded-[10vh] fixed overflow-hidden z-[8]"
+                              >
+                                   <Image
+                                        src={companies[6].image}
+                                        fill
+                                        objectFit="cover"
+                                   />
+                              </motion.a>
+
+                              <motion.div
+                                   style={{
+                                        left: titleseventhCom,
+                                   }}
+                                   className=" w-full h-[50vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
+                              >
+                                   <p className=" lg:text-[6rem] md:text-[5rem] font-bold">
+                                        {companies[6].name}
+                                   </p>
+                                   <p className=" lg:text-[1rem] md:text-[0.7rem]  w-[40%] text-center">
+                                        Product Design, UIUX Design, Branding,
+                                        Visual Design, Art Direction, Concept
+                                        Design for Spotify
+                                   </p>
+                              </motion.div>
+                         </div>
                     </div>
                </div>
           </>

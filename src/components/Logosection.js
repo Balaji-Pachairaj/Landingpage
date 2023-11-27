@@ -1,4 +1,4 @@
-"useclient";
+'use client'
 import React, { useRef } from "react";
 
 import dharan from "../../public/images/dharan.png";
@@ -10,7 +10,7 @@ const Logosection = () => {
 
      const fullRefUseScroll = useScroll({
           target: fullref,
-          offset: ["0 0", "1 0"],
+          offset: ["1 1", "1 0"],
      });
 
      const heightFullRef = useTransform(
@@ -32,21 +32,20 @@ const Logosection = () => {
      );
      const second = useTransform(
           fullRefUseScroll.scrollYProgress,
-          [0, 0.6, 1],
-          [1, 1, 0]
+          [0, 0.999999, 1],
+          [9, 9, -10]
      );
 
-     const display = useTransform( fullRefUseScroll.scrollYProgress, (pos) => {
+     const display = useTransform(fullRefUseScroll.scrollYProgress, (pos) => {
           return pos >= 1 ? "none" : "block";
      });
 
      return (
           <>
-               <div className=" w-full min-h-screen lg:m-0  md:mb-[50vh] mb-[90vh]">
+               <div className=" w-full min-h-screen lg:m-0  md:mb-[50vh] ">
                     <motion.div
                          style={{
-                              opacity: second,
-                              display : display 
+                              zIndex: second,
                          }}
                          className=" w-full h-screen bg-white fixed top-0 flex flex-row justify-center items-center z-[9] "
                     >
@@ -95,7 +94,7 @@ const Logosection = () => {
                               style={{
                                    height: heightFullRef,
                               }}
-                              className=" w-full  absolute top-[50%] -translate-y-[50%] bg-black "
+                              className=" w-full  absolute top-[50%] -translate-y-[50%]  bg-gradientcolor "
                          ></motion.div>
                     </motion.div>
 
