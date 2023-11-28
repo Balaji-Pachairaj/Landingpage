@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { companies } from "@/asset/companies";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
@@ -272,7 +272,7 @@ const Companies = () => {
           let passpositionpass = position * totalslice;
 
           if (pos == 1) {
-               return "rgb(256,256,256 )";
+               return "rgb(0,0,0 )";
           }
 
           if (position <= ifpass * 1) {
@@ -449,22 +449,26 @@ const Companies = () => {
 
                <div
                     ref={workRef}
-                    className=" lg:block hidden w-full h-[1px] "
+                    id="companies"
+                    className=" lg:block hidden w-full h-[0px] "
                ></div>
                <div>
                     <div
                          // style={{
                          //      top: zindexfull,
                          // }}
-                         className=" lg:block sticky top-0  hidden w-full h-screen  lg:text-[20rem] md:text-[15rem] sm:text-[12rem] text-[7rem]  z-[5] overflow-hidden bg-white "
+
+                         className=" font-poppins font-bold lg:block sticky top-0  hidden w-full h-screen  lg:text-[20rem] md:text-[15rem] sm:text-[12rem] text-[7rem]  z-[5] overflow-hidden bg-white "
                     >
                          <motion.div
                               style={{
                                    backgroundColor: color,
                               }}
-                              className=" text-center pt-[1%] w-full h-full flex flex-row justify-center lg:text-[10rem] md:text-[8rem] sm:text-[6rem] text-[5rem] "
+                              className=" text-center   pt-[1%] w-full h-full flex flex-row justify-center lg:text-[10rem] md:text-[8rem] sm:text-[6rem] text-[5rem] "
                          >
-                              OUR COMPANIES
+                              <h1 className=" bg-dharangradient text-transparent bg-clip-text">
+                                   OUR COMPANIES
+                              </h1>
                          </motion.div>
                     </div>
                     <div
@@ -477,7 +481,7 @@ const Companies = () => {
                               ref={firstComRef}
                          >
                               <motion.a
-                                   href="https://google.com"
+                                   href={companies[0].link}
                                    target="blank"
                                    style={{
                                         top: imagetopFirst,
@@ -506,13 +510,8 @@ const Companies = () => {
                                    }}
                                    className=" w-full h-[50vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
                               >
-                                   <p className=" lg:text-[6rem] md:text-[5rem] font-bold">
+                                   <p className=" text-white lg:text-[3.5rem] md:text-[3.5rem] ">
                                         {companies[0].name}
-                                   </p>
-                                   <p className=" lg:text-[1rem] md:text-[0.7rem]  w-[40%] text-center">
-                                        Product Design, UIUX Design, Branding,
-                                        Visual Design, Art Direction, Concept
-                                        Design for Spotify
                                    </p>
                               </motion.div>
                          </div>
@@ -523,7 +522,7 @@ const Companies = () => {
                               ref={secondComRef}
                          >
                               <motion.a
-                                   href="https://google.com"
+                                   href={companies[1].link}
                                    target="blank"
                                    style={{
                                         top: imagetopsecond,
@@ -558,13 +557,8 @@ const Companies = () => {
                                    }}
                                    className=" w-full h-[50vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
                               >
-                                   <p className=" lg:text-[6rem] md:text-[5rem] font-bold">
+                                   <p className=" text-black lg:text-[3.5rem] md:text-[3.5rem] ">
                                         {companies[1].name}
-                                   </p>
-                                   <p className=" lg:text-[1rem] md:text-[0.7rem]  w-[40%] text-center">
-                                        Product Design, UIUX Design, Branding,
-                                        Visual Design, Art Direction, Concept
-                                        Design for Spotify
                                    </p>
                               </motion.div>
                          </div>
@@ -575,7 +569,7 @@ const Companies = () => {
                               ref={thirdComRef}
                          >
                               <motion.a
-                                   href="https://google.com"
+                                   href={companies[2].link}
                                    target="blank"
                                    style={{
                                         top: imagetopthird,
@@ -610,13 +604,8 @@ const Companies = () => {
                                    }}
                                    className=" w-full h-[50vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
                               >
-                                   <p className=" lg:text-[6rem] md:text-[5rem] font-bold">
+                                   <p className="  text-white lg:text-[3.5rem] md:text-[3.5rem] ">
                                         {companies[2].name}
-                                   </p>
-                                   <p className=" lg:text-[1rem] md:text-[0.7rem]  w-[40%] text-center">
-                                        Product Design, UIUX Design, Branding,
-                                        Visual Design, Art Direction, Concept
-                                        Design for Spotify
                                    </p>
                               </motion.div>
                          </div>
@@ -627,7 +616,7 @@ const Companies = () => {
                               ref={fourthComRef}
                          >
                               <motion.a
-                                   href="https://google.com"
+                                   href={companies[3].link}
                                    target="blank"
                                    style={{
                                         top: imagetopfourth,
@@ -649,13 +638,8 @@ const Companies = () => {
                                    }}
                                    className=" w-full h-[50vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
                               >
-                                   <p className=" lg:text-[6rem] md:text-[5rem] font-bold">
+                                   <p className=" text-black lg:text-[3.5rem] md:text-[3.5rem] ">
                                         {companies[3].name}
-                                   </p>
-                                   <p className=" lg:text-[1rem] md:text-[0.7rem]  w-[40%] text-center">
-                                        Product Design, UIUX Design, Branding,
-                                        Visual Design, Art Direction, Concept
-                                        Design for Spotify
                                    </p>
                               </motion.div>
                          </div>
@@ -665,7 +649,7 @@ const Companies = () => {
                               ref={fivethComRef}
                          >
                               <motion.a
-                                   href="https://google.com"
+                                   href={companies[4].link}
                                    target="blank"
                                    style={{
                                         top: imagetopfiveth,
@@ -687,13 +671,8 @@ const Companies = () => {
                                    }}
                                    className=" w-full h-[50vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
                               >
-                                   <p className=" lg:text-[6rem] md:text-[5rem] font-bold">
+                                   <p className="   text-white lg:text-[3.5rem] md:text-[3.5rem] ">
                                         {companies[4].name}
-                                   </p>
-                                   <p className=" lg:text-[1rem] md:text-[0.7rem]  w-[40%] text-center">
-                                        Product Design, UIUX Design, Branding,
-                                        Visual Design, Art Direction, Concept
-                                        Design for Spotify
                                    </p>
                               </motion.div>
                          </div>
@@ -703,7 +682,7 @@ const Companies = () => {
                               ref={sixthComRef}
                          >
                               <motion.a
-                                   href="https://google.com"
+                                   href={companies[5].link}
                                    target="blank"
                                    style={{
                                         top: imagetopsixth,
@@ -725,13 +704,8 @@ const Companies = () => {
                                    }}
                                    className=" w-full h-[50vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
                               >
-                                   <p className=" lg:text-[6rem] md:text-[5rem] font-bold">
+                                   <p className=" text-black lg:text-[3.5rem] md:text-[3.5rem] ">
                                         {companies[5].name}
-                                   </p>
-                                   <p className=" lg:text-[1rem] md:text-[0.7rem]  w-[40%] text-center">
-                                        Product Design, UIUX Design, Branding,
-                                        Visual Design, Art Direction, Concept
-                                        Design for Spotify
                                    </p>
                               </motion.div>
                          </div>
@@ -741,7 +715,7 @@ const Companies = () => {
                               ref={seventhComRef}
                          >
                               <motion.a
-                                   href="https://google.com"
+                                   href={companies[6].link}
                                    target="blank"
                                    style={{
                                         top: imagetopseventh,
@@ -763,13 +737,8 @@ const Companies = () => {
                                    }}
                                    className=" w-full h-[50vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
                               >
-                                   <p className=" lg:text-[6rem] md:text-[5rem] font-bold">
+                                   <p className=" text-white lg:text-[3.5rem] md:text-[3.5rem] ">
                                         {companies[6].name}
-                                   </p>
-                                   <p className=" lg:text-[1rem] md:text-[0.7rem]  w-[40%] text-center">
-                                        Product Design, UIUX Design, Branding,
-                                        Visual Design, Art Direction, Concept
-                                        Design for Spotify
                                    </p>
                               </motion.div>
                          </div>

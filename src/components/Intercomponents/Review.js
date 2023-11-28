@@ -218,21 +218,21 @@ const Review = () => {
      const color = useTransform(fullUseScroll.scrollYProgress, (pos) => {
           // rgb(171, 52, 40)
           let color9 = [171, 52, 40];
-          let color1 = [256, 256, 256];
+          let color1 = [169, 233, 219]
           //rgb(209, 195, 122);
           let color2 = [0, 189, 148];
           //rgb(5, 47, 95);
-          let color3 = [256, 256, 256];
+          let color3 = [169, 233, 219]
           //rgb(1, 8, 16)
           let color4 = [0, 189, 148];
           //rgb(123, 119, 110);
-          let color5 = [256, 256, 256];
+          let color5 = [169, 233, 219]
           //rgb(237, 161, 9)
           let color6 = [0, 189, 148];
           //   let color6 = [237, 161, 9];
-          let color7 = [256, 256, 256];
+          let color7 = [169, 233, 219]
           //rgb(237, 161, 9)
-          let color8 = [256, 256, 256];
+          let color8 = [0, 189, 148];
           let position = pos * 100;
 
           let totalslice = 8;

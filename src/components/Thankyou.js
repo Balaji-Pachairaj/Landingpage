@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 
@@ -32,9 +32,8 @@ const Thankyou = () => {
 
      return (
           <>
-               <div className=" bg-white w-full h-[10rem]"></div>
                <div
-                    className=" w-full h-screen overflow-hidden relative flex flex-col justify-center bg-white"
+                    className=" w-full h-[40vh] overflow-hidden relative flex flex-col justify-center bg-white"
                     ref={fullRef}
                >
                     <div className=" w-full h-[3rem] relative">
@@ -42,7 +41,7 @@ const Thankyou = () => {
                               style={{
                                    left: yellowLeft,
                                    x: "-30%",
-                                   y: "-90%",
+                                   y: "15vh",
                                    rotate: "6deg",
                               }}
                               className=" w-max h-[95px] lg:rotate-[-25deg] rotate-[6deg]  flex flex-row gap-[4rem] bg-dharangradient absolute"
@@ -67,7 +66,7 @@ const Thankyou = () => {
                          </motion.div>
                          <motion.div
                               style={{
-                                   y: "-150%",
+                                   y: "15vh",
                                    rotate: "-5deg",
                                    x: "-50%",
                                    left: greenleft,
@@ -93,6 +92,8 @@ const Thankyou = () => {
                          </motion.div>
                     </div>
                </div>
+
+               
           </>
      );
 };

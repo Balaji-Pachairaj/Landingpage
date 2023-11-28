@@ -1,26 +1,27 @@
-'use client'
+"use client";
 import { companies } from "@/asset/companies";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import React, { useRef } from "react";
 
-const SingleCom = ({ src, name }) => {
+const SingleCom = ({ src, name, textcolor, link }) => {
      return (
           <div className=" w-full h-screen flex flex-col justify-center items-center ">
                <a
-                    href="https://google.com"
+                    href={link}
                     target="blank"
                     className=" w-[80vw] h-[80vw]  rounded-[10vw]  relative overflow-hidden "
                >
                     <Image src={src} fill objectFit="cover" />
                </a>
-               <div className=" ps-[7%] pe-[7%] text-center text-[7vw] font-bold mt-[1rem]">
+               <motion.div
+                    style={{
+                         color: textcolor,
+                    }}
+                    className=" ps-[7%] pe-[7%] text-center text-[5vw] font-bold mt-[1rem]"
+               >
                     {name}
-               </div>
-               <p className=" lg:text-[1rem] md:text-[0.7rem]  w-[40%] text-center">
-                    Product Design, UIUX Design, Branding, Visual Design, Art
-                    Direction, Concept Design for Spotify
-               </p>
+               </motion.div>
           </div>
      );
 };
@@ -283,14 +284,17 @@ const CompaniesSmallScreen = () => {
 
      return (
           <div className=" w-full lg:hidden  ">
-               <div className="w-full sm:h-[50vh] h-[2rem] "></div>
+               <div className="w-full sm:h-[50vh] h-[2rem] bg-white "></div>
                <motion.div
                     style={{
                          backgroundColor: color,
                     }}
+                    id="companiessmallscreen"
                     className=" lg:hidden text-center  w-full h-[80vh] flex flex-row justify-center items-center lg:text-[10rem] md:text-[8rem] sm:text-[6rem] text-[3rem] ps-[3%] pe-[3%] "
                >
-                    OUR COMPANIES
+                    <h1 className=" bg-dharangradient text-transparent bg-clip-text">
+                         OUR COMPANIES
+                    </h1>
                </motion.div>
 
                <motion.div
@@ -303,30 +307,44 @@ const CompaniesSmallScreen = () => {
                     <SingleCom
                          src={companies[0].image}
                          name={companies[0].name}
+                         textcolor={companies[0].textcolor}
+                         link={companies[0].link}
                     />
                     <SingleCom
                          src={companies[1].image}
                          name={companies[1].name}
+                         textcolor={companies[1].textcolor}
+                         link={companies[1].link}
                     />
                     <SingleCom
                          src={companies[2].image}
                          name={companies[2].name}
+                         textcolor={companies[2].textcolor}
+                         link={companies[2].link}
                     />
                     <SingleCom
                          src={companies[3].image}
                          name={companies[3].name}
+                         textcolor={companies[3].textcolor}
+                         link={companies[3].link}
                     />
                     <SingleCom
                          src={companies[4].image}
                          name={companies[4].name}
+                         textcolor={companies[4].textcolor}
+                         link={companies[4].link}
                     />
                     <SingleCom
                          src={companies[5].image}
                          name={companies[5].name}
+                         textcolor={companies[5].textcolor}
+                         link={companies[5].link}
                     />
                     <SingleCom
                          src={companies[6].image}
                          name={companies[6].name}
+                         textcolor={companies[6].textcolor}
+                         link={companies[6].link}
                     />
 
                     <div className="w-full h-[50vh]"></div>

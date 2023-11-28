@@ -42,7 +42,7 @@ const Logosection = () => {
 
      return (
           <>
-               <div className=" w-full min-h-screen lg:m-0  md:mb-[50vh] ">
+               <div className=" w-full min-h-screen lg:m-0  md:mb-[50vh] " id="header">
                     <motion.div
                          style={{
                               zIndex: second,
@@ -94,7 +94,7 @@ const Logosection = () => {
                               style={{
                                    height: heightFullRef,
                               }}
-                              className=" w-full  absolute top-[50%] -translate-y-[50%]  bg-gradientcolor "
+                              className=" w-full  absolute top-[50%] -translate-y-[50%]  bg-black "
                          ></motion.div>
                     </motion.div>
 

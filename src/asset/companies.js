@@ -19,62 +19,71 @@ import timeLine2020one from "../../public/timeline/timeline-2020-1.png";
 import timeLine202015one from "../../public/timeline/timeline-2020-15-1.jpg";
 import timeLine202015two from "../../public/timeline/timeline-2020-15-2.jpg";
 
+import gunasekar from "../../public/team/gunasekar.png";
+import sangeetha from "../../public/team/sangeetha.png";
+import sasikala from "../../public/team/sasikala.png";
+import selvaraja from "../../public/team/selvaraja.png";
+
 export const companies = [
      {
-          name: "Dharan Hospitals",
+          name: "Providing Compassionate Care",
           image: hospitals,
-          color: [256, 256, 256],
+          color: [0, 0, 0],
+          textcolor: "white",
+          link: "https://www.dharanhospital.com/",
      },
      {
-          name: "Dharan Womens care",
+          name: "Excellent Care to Women of All Ages",
           image: womencare,
-          color: [0, 189, 148],
+          color: [256, 256, 256],
+          textcolor: "black",
+          link: "https://www.dharanhospital.com/womenscare/",
      },
      {
-          name: "Dharan Cancer",
+          name: "Providing Hope and Healing",
           image: cancer,
           color: [0, 0, 0],
+          textcolor: "white",
+          link: "https://www.dharanhospital.com/cancercare/",
      },
      {
-          name: "Dharan Health Insitutes",
+          name: "Building Tomorrow’s Healthcare Leaders",
           image: healthinsitutes,
           color: [256, 256, 256],
+          textcolor: "black",
+          link: "https://www.dharanhospital.com/educational-activities.php",
      },
      {
-          name: "Dharan Natural Stone",
+          name: "Premium Showroom for Your Home Needs",
           image: naturalstone,
-          color: [0, 189, 148],
-     },
-     {
-          name: "Dharan Ceramic",
-          image: ceramic,
+          // color: [0, 189, 148],
           color: [0, 0, 0],
+          textcolor: "white",
+          link: "https://www.dharannsp.com/",
      },
      {
-          name: "Dharan Rock",
-          image: rock,
+          name: "Economic Showroom for Your Home Needs.",
+          image: ceramic,
+          // color: [0, 0, 0],
           color: [256, 256, 256],
+          textcolor: "black",
+          link: "https://dceramic.in/",
+     },
+     {
+          name: "Leading Exporters of Rock",
+          image: rock,
+          color: [0, 0, 0],
+          textcolor: "white",
+          link: "https://www.dharanrock.com/",
      },
 ];
 
 export const timeline = [
      {
           time: "2007",
-          detail: `Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna
-          aliqua. Faucibus nisl tincidunt eget
-          nullam non nisi est sit amet. Sapien
-          eget mi proin sed libero. Quis varius
-          quam quisque id diam. Consectetur
-          adipiscing elit duis tristique
-          sollicitudin nibh sit. Eget lorem dolor
-          sed viverra ipsum nunc aliquet bibendum
-          enim. Sollicitudin aliquam ultrices
-          sagittis orci a. Id eu nisl nunc mi
-          ipsum. education`,
+          detail: `In the heart of Salem stood Dharan Hospital, a revolutionary Multispeciality Healthcare Hub, unveiled to the world on January 22, 2007. With its 50-bed wonder and two cutting-edge operation theaters, this marvel was graced by the esteemed MLA Veerapandi V. RAJA, who added prestige to its grand inauguration, marking a historic moment in time`,
           image: timeLine2007one,
-          color: [256, 256, 256],
+          color: [0, 189, 148],
      },
      {
           time: "2010",
@@ -204,5 +213,22 @@ export const timeline = [
           medical technology to new heights`,
           image: timeLine202015one,
           color: [256, 256, 256],
+     },
+];
+
+export const teammember = [
+     {
+          image: selvaraja,
+     },
+     {
+          image: gunasekar,
+     },
+
+     {
+          image: sangeetha,
+     },
+
+     {
+          image: sasikala,
      },
 ];

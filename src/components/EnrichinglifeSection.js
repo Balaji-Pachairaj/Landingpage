@@ -35,7 +35,7 @@ const EnrichinglifeSection = () => {
      const livesleft = useTransform(
           firstSectionUseScroll.scrollYProgress,
           [0, 1],
-          ["75%", "130%"]
+          ["65%", "130%"]
      );
 
      /// =--------------------------------------------
@@ -50,12 +50,12 @@ const EnrichinglifeSection = () => {
      const dLogoTop = useTransform(
           secondSectionUseScroll.scrollYProgress,
           [0, 0.5, 1],
-          ["50%", "50%", "-35%"]
+          ["50%", "50%", "-45%"]
      );
      const paraTop = useTransform(
           secondSectionUseScroll.scrollYProgress,
           [0, 0.5, 1],
-          ["160%", "75%", "-10%"]
+          ["160%", "83%", "-12%"]
      );
 
      //----------------------------------------------------------
@@ -83,12 +83,12 @@ const EnrichinglifeSection = () => {
      return (
           <>
                <motion.div
-                    style={{ height: heightfull, y: "-50%", display }}
-                    className=" w-full h-screen bg-white fixed top-[50%] overflow-hidden -translate-y-[50%] z-[15] text-white"
+                    style={{ height: heightfull, y: "-50%", display }}   id = "enrich"
+                    className=" w-full h-screen bg-white fixed top-[50%] overflow-hidden -translate-y-[50%] z-[15] text-white font-poppins "
                >
                     <motion.div
                          style={{ opacity: opacity }}
-                         className=" w-full h-full relative  bg-dharangradient"
+                         className=" w-full h-full relative  bg-black"
                     >
                          <motion.div
                               style={{
@@ -96,9 +96,9 @@ const EnrichinglifeSection = () => {
                                    y: "0%",
                                    left: enrichlifeleft,
                               }}
-                              className="top-[20%] left-[25%] absolute w-max h-[20vh] font-bold  text-[3.8em] "
+                              className="top-[20%] left-[25%] absolute w-max h-[20vh] font-bold  text-[6.2em]  bg-dharangradient text-transparent bg-clip-text "
                          >
-                              Enriching Life
+                              Enriching
                          </motion.div>
                          <motion.div
                               style={{
@@ -106,9 +106,9 @@ const EnrichinglifeSection = () => {
                                    y: "0%",
                                    left: livesleft,
                               }}
-                              className="top-[70%] left-[75%] absolute w-max h-[20vh] font-bold  text-[3.8em] "
+                              className="top-[70%] left-[75%] absolute w-max h-[20vh] font-bold  text-[6.2em]  bg-dharangradient text-transparent bg-clip-text "
                          >
-                              Lives
+                               Lives
                          </motion.div>
                          <motion.div
                               style={{
@@ -129,7 +129,7 @@ const EnrichinglifeSection = () => {
                                    y: "-50%",
                                    top: paraTop,
                               }}
-                              className=" w-[40vw] absolute top-[75%] left-[65%]  font-bold  text-end text-[1.3em]   "
+                              className=" w-[40vw] absolute top-[75%] left-[65%]  font-bold  text-end text-[2.3em]   "
                          >
                               With Transparency, Integrity and Commitment,
                               Dharan elevates the lives of people and brings
@@ -139,7 +139,7 @@ const EnrichinglifeSection = () => {
                     </motion.div>
                </motion.div>
                <div
-                    className=" w-full min-h-screen z-[5] bg-white"
+                    className=" hidden lg:block w-full min-h-screen z-[5] bg-white"
                     ref={fullRef}
                >
                     <div className=" w-full h-screen "></div>
