@@ -24,6 +24,7 @@ export default function Home() {
 
                <EnrichinglifeSection />
 
+               <div id="companies" className=" w-full h-[0.0001px] "></div>
                <Companies />
                <CompaniesSmallScreen />
 
@@ -34,7 +35,7 @@ export default function Home() {
                <ContactUs />
 
                <FooterSection />
-               <Thankyou />
+               {/* <Thankyou /> */}
           </>
      );
 }

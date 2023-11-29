@@ -207,7 +207,7 @@ const Review = () => {
                returnvalue = c1 - unitpercentage;
           }
 
-          console.log(c1, c2, returnvalue, percentage);
+        //  console.log(c1, c2, returnvalue, percentage);
 
           if (unitpercentage < 0) return 0;
           if (unitpercentage > 256) return 256;
@@ -241,7 +241,7 @@ const Review = () => {
 
           let passpositionpass = position * totalslice;
 
-          console.log(ifpass);
+         // console.log(ifpass);
 
           if (pos == 1) {
                return "rgb(256,256,256 )";
@@ -255,7 +255,7 @@ const Review = () => {
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
 
-               console.log(o);
+               // console.log(o);
 
                return o;
           }
@@ -268,7 +268,7 @@ const Review = () => {
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
 
-               console.log(o);
+               // console.log(o);
                return o;
           }
 
@@ -280,7 +280,7 @@ const Review = () => {
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
 
-               console.log(o);
+               // console.log(o);
                return o;
           }
 
@@ -292,7 +292,7 @@ const Review = () => {
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
 
-               console.log(o);
+               // console.log(o);
                return o;
           }
 
@@ -304,7 +304,7 @@ const Review = () => {
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
 
-               console.log(o);
+               // console.log(o);
                return o;
           }
           if (position <= ifpass * 6) {
@@ -315,7 +315,7 @@ const Review = () => {
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
 
-               console.log(o);
+               // console.log(o);
                return o;
           }
           if (position <= ifpass * 7) {
@@ -326,7 +326,7 @@ const Review = () => {
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
 
-               console.log(o);
+               // console.log(o);
                return o;
           }
      });

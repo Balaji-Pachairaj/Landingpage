@@ -29,13 +29,13 @@ const EnrichinglifeSection = () => {
      const enrichlifeleft = useTransform(
           firstSectionUseScroll.scrollYProgress,
           [0, 1],
-          ["25%", "-30%"]
+          ["30%", "-25%"]
      );
 
      const livesleft = useTransform(
           firstSectionUseScroll.scrollYProgress,
           [0, 1],
-          ["65%", "130%"]
+          ["75%", "140%"]
      );
 
      /// =--------------------------------------------
@@ -54,8 +54,8 @@ const EnrichinglifeSection = () => {
      );
      const paraTop = useTransform(
           secondSectionUseScroll.scrollYProgress,
-          [0, 0.5, 1],
-          ["160%", "83%", "-12%"]
+          [0, 0.01, 0.5, 1],
+          ["10000%", "160%", "83%", "-12%"]
      );
 
      //----------------------------------------------------------
@@ -83,7 +83,8 @@ const EnrichinglifeSection = () => {
      return (
           <>
                <motion.div
-                    style={{ height: heightfull, y: "-50%", display }}   id = "enrich"
+                    style={{ height: heightfull, y: "-50%", display }}
+                    id="enrich"
                     className=" w-full h-screen bg-white fixed top-[50%] overflow-hidden -translate-y-[50%] z-[15] text-white font-poppins "
                >
                     <motion.div
@@ -96,9 +97,9 @@ const EnrichinglifeSection = () => {
                                    y: "0%",
                                    left: enrichlifeleft,
                               }}
-                              className="top-[20%] left-[25%] absolute w-max h-[20vh] font-bold  text-[6.2em]  bg-dharangradient text-transparent bg-clip-text "
+                              className="top-[20%] left-[25%] absolute w-max h-[20vh] font-semibold  text-[4em] bg-whitelight text-transparent bg-clip-text "
                          >
-                              Enriching
+                              WE ARE
                          </motion.div>
                          <motion.div
                               style={{
@@ -106,9 +107,9 @@ const EnrichinglifeSection = () => {
                                    y: "0%",
                                    left: livesleft,
                               }}
-                              className="top-[70%] left-[75%] absolute w-max h-[20vh] font-bold  text-[6.2em]  bg-dharangradient text-transparent bg-clip-text "
+                              className="top-[70%] left-[75%] absolute w-max h-[20vh] font-semibold  text-[4em]  bg-whitelight text-transparent bg-clip-text "
                          >
-                               Lives
+                              ENRICHING LIVES
                          </motion.div>
                          <motion.div
                               style={{
@@ -129,12 +130,20 @@ const EnrichinglifeSection = () => {
                                    y: "-50%",
                                    top: paraTop,
                               }}
-                              className=" w-[40vw] absolute top-[75%] left-[65%]  font-bold  text-end text-[2.3em]   "
+                              className=" w-[40vw] absolute top-[175%] left-[65%]  font-bold font-poppins  text-end text-[1.9em]    "
                          >
-                              With Transparency, Integrity and Commitment,
-                              Dharan elevates the lives of people and brings
-                              impact to the world through its universe of
-                              companies.
+                              <p className="bg-whitelight text-transparent bg-clip-text font-bold ">
+                                   With Transparency, Integrity and
+                              </p>
+                              <p className="bg-whitelight text-transparent bg-clip-text font-bold ">
+                                   Commitment,Dharan elevates the lives
+                              </p>
+                              <p className="bg-whitelight text-transparent bg-clip-text font-bold ">
+                                   of people and brings impact to the world
+                              </p>
+                              <p className="bg-whitelight text-transparent bg-clip-text font-bold ">
+                                   through its universe of companies.
+                              </p>
                          </motion.div>
                     </motion.div>
                </motion.div>

@@ -354,7 +354,7 @@ const Companies = () => {
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
 
-               console.log(o);
+               // console.log(o);
                return o;
           }
 
@@ -366,7 +366,7 @@ const Companies = () => {
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
 
-               console.log(o);
+               // console.log(o);
                return o;
           }
           if (position <= ifpass * 9) {
@@ -377,7 +377,7 @@ const Companies = () => {
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
 
-               console.log(o);
+               // console.log(o);
                return o;
           }
           if (position <= ifpass * 10) {
@@ -388,7 +388,7 @@ const Companies = () => {
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
 
-               console.log(o);
+               // console.log(o);
                return o;
           }
           if (position <= ifpass * 11) {
@@ -399,7 +399,7 @@ const Companies = () => {
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
 
-               console.log(o);
+               // console.log(o);
                return o;
           }
           if (position <= ifpass * 12) {
@@ -410,7 +410,7 @@ const Companies = () => {
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
 
-               console.log(o);
+               // console.log(o);
                return o;
           }
           if (position <= ifpass * 13) {
@@ -421,7 +421,7 @@ const Companies = () => {
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
 
-               console.log(o);
+               // console.log(o);
                return o;
           }
           if (position <= ifpass * 14) {
@@ -432,7 +432,7 @@ const Companies = () => {
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
 
-               console.log(o);
+               // console.log(o);
                return o;
           }
      });
@@ -449,7 +449,7 @@ const Companies = () => {
 
                <div
                     ref={workRef}
-                    id="companies"
+                    // id="companies"
                     className=" lg:block hidden w-full h-[0px] "
                ></div>
                <div>
@@ -457,8 +457,7 @@ const Companies = () => {
                          // style={{
                          //      top: zindexfull,
                          // }}
-
-                         className=" font-poppins font-bold lg:block sticky top-0  hidden w-full h-screen  lg:text-[20rem] md:text-[15rem] sm:text-[12rem] text-[7rem]  z-[5] overflow-hidden bg-white "
+                         className=" font-poppins font-semibold lg:block sticky top-0  hidden w-full h-screen  lg:text-[20rem] md:text-[15rem] sm:text-[12rem] text-[7rem]  z-[5] overflow-hidden bg-white "
                     >
                          <motion.div
                               style={{
@@ -466,8 +465,8 @@ const Companies = () => {
                               }}
                               className=" text-center   pt-[1%] w-full h-full flex flex-row justify-center lg:text-[10rem] md:text-[8rem] sm:text-[6rem] text-[5rem] "
                          >
-                              <h1 className=" bg-dharangradient text-transparent bg-clip-text">
-                                   OUR COMPANIES
+                              <h1 className="  capitalize text-white">
+                                   DHARAN GROUP
                               </h1>
                          </motion.div>
                     </div>
@@ -477,7 +476,7 @@ const Companies = () => {
                     >
                          {/* companies one */}
                          <div
-                              className=" w-full h-[400vh] flex flex-col justify-center items-center "
+                              className=" w-full h-[250vh] flex flex-col justify-center items-center "
                               ref={firstComRef}
                          >
                               <motion.a
@@ -488,7 +487,7 @@ const Companies = () => {
                                         left: "50%",
                                         x: "-50%",
                                    }}
-                                   className=" w-[81vh] h-[81vh] bg-red-700 rounded-[10vh] fixed overflow-hidden z-[8]"
+                                   className=" w-[81vh] h-[81vh]  rounded-[10vh] fixed overflow-hidden z-[8]"
                               >
                                    <Image
                                         src={companies[0].image}
@@ -501,16 +500,16 @@ const Companies = () => {
                               style={{
                                    left: detailfirstCom,
                               }}
-                              className="  w-full h-[50vh] fixed top-[50%] z-[7] flex flex-row justify-center items-center"
+                              className="  w-full h-[60vh] fixed top-[50%] z-[7] flex flex-row justify-center items-center"
                          ></motion.div> */}
 
                               <motion.div
                                    style={{
                                         left: titlefirstCom,
                                    }}
-                                   className=" w-full h-[50vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
+                                   className=" w-full h-[60vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
                               >
-                                   <p className=" text-white lg:text-[3.5rem] md:text-[3.5rem] ">
+                                   <p className=" text-white lg:text-[3rem] md:text-[2.5rem] font-semibold capitalize ">
                                         {companies[0].name}
                                    </p>
                               </motion.div>
@@ -518,7 +517,7 @@ const Companies = () => {
 
                          {/* companies two */}
                          <div
-                              className=" w-full h-[400vh] flex flex-col justify-center items-center "
+                              className=" w-full h-[250vh] flex flex-col justify-center items-center "
                               ref={secondComRef}
                          >
                               <motion.a
@@ -529,7 +528,7 @@ const Companies = () => {
                                         left: "50%",
                                         x: "-50%",
                                    }}
-                                   className=" w-[81vh] h-[81vh] bg-red-700 rounded-[10vh] fixed overflow-hidden z-[8]"
+                                   className=" w-[81vh] h-[81vh]  rounded-[10vh] fixed overflow-hidden z-[8]"
                               >
                                    <Image
                                         src={companies[1].image}
@@ -542,7 +541,7 @@ const Companies = () => {
                               style={{
                                    left: detailsecondCom,
                               }}
-                              className="  w-full h-[50vh] fixed top-[50%] z-[7] flex flex-row justify-center items-center"
+                              className="  w-full h-[60vh] fixed top-[50%] z-[7] flex flex-row justify-center items-center"
                               >
                               <p className=" lg:text-[1rem] md:text-[0.7rem]  w-[15%]">
                               Product Design, UIUX Design, Branding, Visual
@@ -555,9 +554,9 @@ const Companies = () => {
                                    style={{
                                         left: titlesecondCom,
                                    }}
-                                   className=" w-full h-[50vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
+                                   className=" w-full h-[60vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
                               >
-                                   <p className=" text-black lg:text-[3.5rem] md:text-[3.5rem] ">
+                                   <p className=" text-white lg:text-[3rem] md:text-[2.5rem] font-semibold capitalize ">
                                         {companies[1].name}
                                    </p>
                               </motion.div>
@@ -565,7 +564,7 @@ const Companies = () => {
 
                          {/* companies three */}
                          <div
-                              className=" w-full h-[400vh] flex flex-col justify-center items-center "
+                              className=" w-full h-[250vh] flex flex-col justify-center items-center "
                               ref={thirdComRef}
                          >
                               <motion.a
@@ -576,7 +575,7 @@ const Companies = () => {
                                         left: "50%",
                                         x: "-50%",
                                    }}
-                                   className=" w-[81vh] h-[81vh] bg-red-700 rounded-[10vh] fixed overflow-hidden z-[8]"
+                                   className=" w-[81vh] h-[81vh]  rounded-[10vh] fixed overflow-hidden z-[8]"
                               >
                                    <Image
                                         src={companies[2].image}
@@ -589,7 +588,7 @@ const Companies = () => {
                               style={{
                                    left: detailthirdCom,
                               }}
-                              className="  w-full h-[50vh] fixed top-[50%] z-[7] flex flex-row justify-center items-center"
+                              className="  w-full h-[60vh] fixed top-[50%] z-[7] flex flex-row justify-center items-center"
                               >
                               <p className=" lg:text-[1rem] md:text-[0.7rem]  w-[15%]">
                               Product Design, UIUX Design, Branding, Visual
@@ -602,9 +601,9 @@ const Companies = () => {
                                    style={{
                                         left: titlethirdCom,
                                    }}
-                                   className=" w-full h-[50vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
+                                   className=" w-full h-[60vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
                               >
-                                   <p className="  text-white lg:text-[3.5rem] md:text-[3.5rem] ">
+                                   <p className="  text-white lg:text-[3rem] md:text-[2.5rem] font-semibold capitalize ">
                                         {companies[2].name}
                                    </p>
                               </motion.div>
@@ -612,7 +611,7 @@ const Companies = () => {
 
                          {/* companies fourth */}
                          <div
-                              className=" w-full h-[400vh] flex flex-col justify-center items-center "
+                              className=" w-full h-[250vh] flex flex-col justify-center items-center "
                               ref={fourthComRef}
                          >
                               <motion.a
@@ -623,7 +622,7 @@ const Companies = () => {
                                         left: "50%",
                                         x: "-50%",
                                    }}
-                                   className=" w-[81vh] h-[81vh] bg-red-700 rounded-[10vh] fixed overflow-hidden z-[8]"
+                                   className=" w-[81vh] h-[81vh]  rounded-[10vh] fixed overflow-hidden z-[8]"
                               >
                                    <Image
                                         src={companies[3].image}
@@ -636,16 +635,16 @@ const Companies = () => {
                                    style={{
                                         left: titlefourthCom,
                                    }}
-                                   className=" w-full h-[50vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
+                                   className=" w-full h-[60vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
                               >
-                                   <p className=" text-black lg:text-[3.5rem] md:text-[3.5rem] ">
+                                   <p className=" text-white lg:text-[3rem] md:text-[2.5rem] font-semibold capitalize ">
                                         {companies[3].name}
                                    </p>
                               </motion.div>
                          </div>
                          {/* companies fiveth */}
                          <div
-                              className=" w-full h-[400vh] flex flex-col justify-center items-center "
+                              className=" w-full h-[250vh] flex flex-col justify-center items-center "
                               ref={fivethComRef}
                          >
                               <motion.a
@@ -656,7 +655,7 @@ const Companies = () => {
                                         left: "50%",
                                         x: "-50%",
                                    }}
-                                   className=" w-[81vh] h-[81vh] bg-red-700 rounded-[10vh] fixed overflow-hidden z-[8]"
+                                   className=" w-[81vh] h-[81vh]  rounded-[10vh] fixed overflow-hidden z-[8]"
                               >
                                    <Image
                                         src={companies[4].image}
@@ -669,16 +668,16 @@ const Companies = () => {
                                    style={{
                                         left: titlefivethCom,
                                    }}
-                                   className=" w-full h-[50vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
+                                   className=" w-full h-[60vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
                               >
-                                   <p className="   text-white lg:text-[3.5rem] md:text-[3.5rem] ">
+                                   <p className="   text-white lg:text-[3rem] md:text-[2.5rem] font-semibold capitalize ">
                                         {companies[4].name}
                                    </p>
                               </motion.div>
                          </div>
                          {/* companies sixth */}
                          <div
-                              className=" w-full h-[400vh] flex flex-col justify-center items-center "
+                              className=" w-full h-[250vh] flex flex-col justify-center items-center "
                               ref={sixthComRef}
                          >
                               <motion.a
@@ -689,7 +688,7 @@ const Companies = () => {
                                         left: "50%",
                                         x: "-50%",
                                    }}
-                                   className=" w-[81vh] h-[81vh] bg-red-700 rounded-[10vh] fixed overflow-hidden z-[8]"
+                                   className=" w-[81vh] h-[81vh]  rounded-[10vh] fixed overflow-hidden z-[8]"
                               >
                                    <Image
                                         src={companies[5].image}
@@ -702,16 +701,16 @@ const Companies = () => {
                                    style={{
                                         left: titlesixthCom,
                                    }}
-                                   className=" w-full h-[50vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
+                                   className=" w-full h-[60vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
                               >
-                                   <p className=" text-black lg:text-[3.5rem] md:text-[3.5rem] ">
+                                   <p className=" text-white lg:text-[3rem] md:text-[2.5rem] font-semibold capitalize ">
                                         {companies[5].name}
                                    </p>
                               </motion.div>
                          </div>
                          {/* companies seventh */}
                          <div
-                              className=" w-full h-[400vh] flex flex-col justify-center items-center "
+                              className=" w-full h-[250vh] flex flex-col justify-center items-center "
                               ref={seventhComRef}
                          >
                               <motion.a
@@ -722,7 +721,7 @@ const Companies = () => {
                                         left: "50%",
                                         x: "-50%",
                                    }}
-                                   className=" w-[81vh] h-[81vh] bg-red-700 rounded-[10vh] fixed overflow-hidden z-[8]"
+                                   className=" w-[81vh] h-[81vh]  rounded-[10vh] fixed overflow-hidden z-[8]"
                               >
                                    <Image
                                         src={companies[6].image}
@@ -735,9 +734,9 @@ const Companies = () => {
                                    style={{
                                         left: titleseventhCom,
                                    }}
-                                   className=" w-full h-[50vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
+                                   className=" w-full h-[60vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
                               >
-                                   <p className=" text-white lg:text-[3.5rem] md:text-[3.5rem] ">
+                                   <p className=" text-white lg:text-[3rem] md:text-[2.5rem] font-semibold capitalize ">
                                         {companies[6].name}
                                    </p>
                               </motion.div>

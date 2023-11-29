@@ -79,31 +79,34 @@ const FooterSection = () => {
                     <Container>
                          <div className="  flex flex-row absolute animate-slideleft1">
                               <FooterCircle />
-
                               <SmallBox>
                                    <FooterText>
                                         We prioritize integrity
                                    </FooterText>
                               </SmallBox>
-                              <FooterCircle />
 
-                              <SmallBox>
-                                   <FooterText>We are passionate</FooterText>
-                              </SmallBox>
                               <FooterCircle />
                               <SmallBox>
                                    <FooterText>We are passionate</FooterText>
                               </SmallBox>
+
                               <FooterCircle />
                               <SmallBox>
                                    <FooterText>We are passionate</FooterText>
                               </SmallBox>
+
+                              <FooterCircle />
+                              <SmallBox>
+                                   <FooterText>We are passionate</FooterText>
+                              </SmallBox>
+
                               <FooterCircle />
                               <SmallBox>
                                    <FooterText>We are passionate</FooterText>
                               </SmallBox>
                          </div>
                     </Container>
+
                     <Container>
                          <div className=" absolute flex flex-row animate-slideright ">
                               <FooterCircle />
@@ -132,7 +135,6 @@ const FooterSection = () => {
                                         Empowering Through Innovation
                                    </FooterText>
                               </BigBox>
-                              <FooterCircle />
                          </div>
                     </Container>
                </div>
@@ -142,25 +144,25 @@ const FooterSection = () => {
                          <div className=" md:w-[25%] w-[50%] md:h-full h-[25%] flex flex-col  justify-center items-center relative">
                               <Image src={dharan} fill objectFit="cover" />
                          </div>
-                         <div className=" md:w-[25%] w-[50%] md:h-full h-[25%] flex flex-col  justify-evenly items-center relative text-[24px]">
+                         <div className=" md:w-[15%] w-[50%] md:h-full h-[25%] flex flex-col  justify-evenly lg:items-start items-center relative text-[24px]">
                               <a
                                    href="#companies"
-                                   className=" lg:block hidden  scroll-m-5"
+                                   className="  scroll-m-5"
                                    style={{
                                         transition: " scroll-behavior 0.3s",
                                    }}
                               >
                                    Our Companies
                               </a>
-                              <a
-                                   href="#companiessmallscreen"
+                              {/* <a
+                                   href="#companies"
                                    className=" lg:hidden  scroll-m-5"
                                    style={{
                                         transition: " scroll-behavior 0.3s",
                                    }}
                               >
                                    Our Companies
-                              </a>
+                              </a> */}
                               <a
                                    href="#ourjourney"
                                    className="  scroll-m-5"
@@ -171,22 +173,22 @@ const FooterSection = () => {
                                    Our Journey
                               </a>
                          </div>
-                         <div className=" md:w-[25%] w-[50%] md:h-full h-[25%] flex flex-col  justify-evenly items-center relative text-[24px]">
-                         <a
+                         <div className=" md:w-[15%] w-[50%] md:h-full h-[25%] flex flex-col  justify-evenly lg:items-start items-center relative text-[24px]">
+                              <a
                                    href="#meetourteam"
                                    className="  scroll-m-5"
                                    style={{
                                         transition: " scroll-behavior 0.3s",
                                    }}
                               >
-                                   Our team
+                                   Our Team
                               </a>
                               <a
                                    href="#contact"
                                    className="  scroll-m-5"
                                    style={{
                                         transition: " scroll-behavior 0.5s",
-                                        transitionDuration : "5s"
+                                        transitionDuration: "5s",
                                    }}
                               >
                                    Contact
@@ -207,9 +209,11 @@ const FooterSection = () => {
                               </div>
                          </div>
                     </div>
-                    {/* <div classname=" w-full h-[20%] text-[24px] text-center ps-[10vh]">
-                         2023 Dharan Group. All rights reserved
-                    </div> */}
+                    <div classname="z-[10000] w-full h-[25vh] ps-[20vh]  bg-white text-[24px] text-center ">
+                         <p className=" ps-[10vh]">
+                              2023 Dharan Group. All rights reserved
+                         </p>
+                    </div>
                </div>
           </>
      );

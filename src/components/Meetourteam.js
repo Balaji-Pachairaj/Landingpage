@@ -116,7 +116,7 @@ const Meetourteam = () => {
 
      return (
           <>
-               <div
+               {/* <div
                     id="meetourteam"
                     className=" w-full min-h-screen flex flex-row justify-center items-center overflow-hidden text-center bg-white"
                >
@@ -144,6 +144,11 @@ const Meetourteam = () => {
                          <Ourteam />
                          <Ourteam />
                     </div>
+               </div> */}
+               <div id="meetourteam" className=" w-full h-[40vh] flex flex-col justify-center  bg-white">
+                    <h1 className="  bg-dharangradient text-transparent bg-clip-text text-center   flex-shrink-0 lg:text-[6rem] md:text-[6rem] sm:text-[4rem] text-[2rem]   font-[600] ">
+                         OUR TEAM
+                    </h1>
                </div>
                <div
                     className=" w-full min-h-screen relative bg-white  "

@@ -62,7 +62,7 @@ const TimeLineComponent = (props) => {
                     <div className=" w-full  text-start ps-4 block md:hidden mb-8">
                          <p
                               style={{ fontFamily: "Poppins" }}
-                              className=" font-Poppins  sm:text-[40px] text-[35px]  font-bold bg-textcolor text-transparent bg-clip-text  "
+                              className=" font-Poppins text-white  sm:text-[40px] text-[35px]  font-bold bg-textcolor text-transparent bg-clip-text  "
                          >
                               {props.time}
                          </p>
@@ -105,6 +105,19 @@ const Timeline2 = () => {
                     id="ourjourney"
                     className=" relative bg-dharangradient2 font-poppins"
                >
+                    {/* <div className=" w-full min-h-screen ">
+                         <motion.div
+                              style={{
+                                   x : "-50%",
+                                   y: "-50%",
+                              }}
+                              className=" text-center   fixed top-[50%] left-[50%]  w-full  h-min"
+                         >
+                              <motion.h1 className=" sticky text-[60vw] font-thin">
+                                   20
+                              </motion.h1>
+                         </motion.div>
+                    </div> */}
                     {/* <div className=" w-full min-h-screen " ref={seekTextRef}>
                          <motion.div
                               className=" fixed top-[50%] left-[50%] w-full text-center"

@@ -18,7 +18,7 @@ const SingleCom = ({ src, name, textcolor, link }) => {
                     style={{
                          color: textcolor,
                     }}
-                    className=" ps-[7%] pe-[7%] text-center text-[5vw] font-bold mt-[1rem]"
+                    className=" ps-[7%] pe-[7%] text-center text-[3.5vw] font-semibold mt-[1rem]"
                >
                     {name}
                </motion.div>
@@ -117,7 +117,7 @@ const CompaniesSmallScreen = () => {
           let passpositionpass = position * totalslice;
 
           if (pos == 1) {
-               return "rgb(256,256,256 )";
+               return "rgb(0,0, 0 )";
           }
 
           if (position <= ifpass * 1) {
@@ -199,7 +199,7 @@ const CompaniesSmallScreen = () => {
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
 
-               console.log(o);
+               // console.log(o);
                return o;
           }
 
@@ -211,7 +211,7 @@ const CompaniesSmallScreen = () => {
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
 
-               console.log(o);
+               // console.log(o);
                return o;
           }
           if (position <= ifpass * 9) {
@@ -222,7 +222,7 @@ const CompaniesSmallScreen = () => {
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
 
-               console.log(o);
+               // console.log(o);
                return o;
           }
           if (position <= ifpass * 10) {
@@ -233,7 +233,7 @@ const CompaniesSmallScreen = () => {
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
 
-               console.log(o);
+               // console.log(o);
                return o;
           }
           if (position <= ifpass * 11) {
@@ -244,7 +244,7 @@ const CompaniesSmallScreen = () => {
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
 
-               console.log(o);
+               // console.log(o);
                return o;
           }
           if (position <= ifpass * 12) {
@@ -255,7 +255,7 @@ const CompaniesSmallScreen = () => {
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
 
-               console.log(o);
+               // console.log(o);
                return o;
           }
           if (position <= ifpass * 13) {
@@ -266,7 +266,7 @@ const CompaniesSmallScreen = () => {
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
 
-               console.log(o);
+               // console.log(o);
                return o;
           }
           if (position <= ifpass * 14) {
@@ -277,7 +277,7 @@ const CompaniesSmallScreen = () => {
 
                let o = "rgb(" + p1 + "," + p2 + ", " + p3 + ")";
 
-               console.log(o);
+               // console.log(o);
                return o;
           }
      });

@@ -2,7 +2,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import React, { useRef } from "react";
-
+import contactus from "../../public/images/contactusimage.png";
 import email from "../../public/team/email.png";
 import whatsapp from "../../public/team/whatsapp.png";
 
@@ -35,9 +35,12 @@ const ContactUs = () => {
                          width: widthFull,
                          height: heightFull,
                     }}
-                    className=" w-[100vw] h-[100vh] rounded-[5rem] bg-dharangradient flex flex-col justify-center gap-[4vh] text-white"
+                    className=" w-[100vw] h-[100vh] rounded-[5rem]  flex flex-col justify-center gap-[4vh] text-white relative overflow-hidden"
                >
-                    <div className=" text-[7vw] font-bold text-center">
+                    <div className="w-full h-full hover:scale-110 hover:rotate-3 duration-500 cursor-pointer">
+                         <Image src={contactus} fill objectFit="cover" />
+                    </div>
+                    {/* <div className=" text-[7vw] font-bold text-center">
                          Let's Contact
                     </div>
                     <div className=" w-full h-min flex lg:flex-row  flex-col items-center justify-center gap-[5vw]">
@@ -67,7 +70,7 @@ const ContactUs = () => {
                                    +91-427-2709999
                               </div>
                          </div>
-                    </div>
+                    </div> */}
                </motion.div>
           </div>
      );

@@ -17,6 +17,11 @@ module.exports = {
                          "linear-gradient(109deg, #00BD94 32.98%, #019BA2 79.81%)",
                     dharangradient2:
                          " linear-gradient(275deg, #0095cb, #3fb49a)",
+                    dharangradient3:
+                         " linear-gradient(90deg, #017BA2 45.02%, #00BD94 99.79%)",
+
+                    whitelight:
+                         "linear-gradient(96deg, #FFF -4.79%, rgba(255, 255, 255, 0.35) 98.05%)",
                },
 
                fontFamily: {
