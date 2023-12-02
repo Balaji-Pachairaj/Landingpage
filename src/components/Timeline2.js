@@ -78,7 +78,7 @@ const Timeline2 = () => {
 
      const seekTextRefUseScroll = useScroll({
           target: seekTextRef,
-          offset: ["0 1", "1 0"],
+          offset: ["0 1", "0 0"],
      });
 
      const scaleSeekTextRef = useTransform(
@@ -99,44 +99,81 @@ const Timeline2 = () => {
           [1, 1, 0, 0]
      );
 
+     //----------------------------------------------------------------------
+
+     const firstsectionRef = useRef();
+
+     const firstSectionUseScroll = useScroll({
+          target: firstsectionRef,
+          offset: ["0 0.7", "1 0.1"],
+     });
+
+     const topFirstSectionRef = useTransform(
+          firstSectionUseScroll.scrollYProgress,
+          [0, 0.5, 1],
+          ["150%", "50%", "50%"]
+     );
+     const topFirstSectionRef2 = useTransform(
+          firstSectionUseScroll.scrollYProgress,
+          [0, 0.5, 0.7, 1],
+          ["150%", "50%", "0%", "-50%"]
+     );
+     const leftFirstSectionRef = useTransform(
+          firstSectionUseScroll.scrollYProgress,
+          [0, 0.5, 1],
+          ["50%", "50%", "-100%"]
+     );
+
+     const scaleFirstSection = useTransform(
+          firstSectionUseScroll.scrollYProgress,
+          [0, 0.5, 1],
+          [1, 1, 13]
+     );
+
+     const display = useTransform(
+          firstSectionUseScroll.scrollYProgress,
+          (pos) => {
+               return pos >= 1 ? "none" : "block";
+          }
+     );
      return (
           <>
                <div
                     id="ourjourney"
                     className=" relative bg-dharangradient2 font-poppins"
                >
-                    {/* <div className=" w-full min-h-screen ">
+                    <div className=" w-full h-screen " ref={firstsectionRef}>
                          <motion.div
                               style={{
-                                   x : "-50%",
+                                   x: "-50%",
                                    y: "-50%",
+                                   top: topFirstSectionRef,
+                                   left: leftFirstSectionRef,
+                                   scale: scaleFirstSection,
+                                   display,
                               }}
-                              className=" text-center   fixed top-[50%] left-[50%]  w-full  h-min"
+                              className=" text-center   fixed top-[50%] left-[50%]  w-full  h-min cursor-default"
                          >
-                              <motion.h1 className=" sticky text-[60vw] font-thin">
+                              <motion.h1 className=" sticky text-[40vw]  font-extralight  font-poppins bg-whitelight text-transparent bg-clip-text">
                                    20
                               </motion.h1>
                          </motion.div>
-                    </div> */}
-                    {/* <div className=" w-full min-h-screen " ref={seekTextRef}>
                          <motion.div
-                              className=" fixed top-[50%] left-[50%] w-full text-center"
                               style={{
-                                //    opacity: opacitySeekTextRef,
-                                //    scale: scaleSeekTextRef,
-                                   y: "-50%",
                                    x: "-50%",
+                                   y: "-50%",
+                                   top: topFirstSectionRef2,
+                                   // left: leftFirstSectionRef,
+                                   // scale: scaleFirstSection,
                               }}
+                              className=" text-center   fixed top-[50%] left-[61%]  w-full  h-min cursor-default"
                          >
-                              <h1 className="  font-Poppins font-extrabold lg:text-[60px] md:text-[50px] sm:text-[40px] text-[24px]  bg-textcolor text-transparent bg-clip-text   ">
-                                   Seeds to Skyscrapers
-                              </h1>
-                              <p className=" md:text-[24px] text-[16px] text-black font-Poppins ps-6 pe-6">
-                                   pharetra diam sit amet nisl suscipit
-                                   adipiscing bibendum est ultricies
-                              </p>
+                              <motion.h1 className=" sticky md:text-[2vw] text-[2vw]  font-extralight bg-whitelight text-transparent bg-clip-text">
+                                   years of <br></br> experience
+                              </motion.h1>
                          </motion.div>
-                    </div> */}
+                    </div>
+
                     <div className=" w-full h-screen flex flex-col justify-center ">
                          <h1 className=" text-white text-center   flex-shrink-0 lg:text-[8rem] md:text-[6rem] sm:text-[4rem] text-[2rem]   font-[600] ">
                               OUR JOURNEY

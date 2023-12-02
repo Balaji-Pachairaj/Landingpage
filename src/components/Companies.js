@@ -223,7 +223,7 @@ const Companies = () => {
                returnvalue = c1 - unitpercentage;
           }
 
-          console.log(c1, c2, returnvalue, percentage);
+         // console.log(c1, c2, returnvalue, percentage);
 
           if (unitpercentage < 0) return 0;
           if (unitpercentage > 256) return 256;

@@ -5,8 +5,10 @@ import CompaniesSmallScreen from "@/components/CompaniesSmallScreen";
 import ContactUs from "@/components/ContactUs";
 import EnrichinglifeSection from "@/components/EnrichinglifeSection";
 import EnrichingsectionSmallScreen from "@/components/EnrichingsectionSmallScreen";
+import FirstSection from "@/components/FirstSection";
 import FooterSection from "@/components/FooterSection";
 import Logosection from "@/components/Logosection";
+import MeetOurTeam2 from "@/components/MeetOurTeam2";
 import Meetourteam from "@/components/Meetourteam";
 import Thankyou from "@/components/Thankyou";
 
@@ -19,6 +21,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
      return (
           <>
+               {/* <FirstSection /> */}
                <Logosection />
                <EnrichingsectionSmallScreen />
 
@@ -30,7 +33,9 @@ export default function Home() {
 
                <Timeline2 />
 
-               <Meetourteam />
+               {/* <Meetourteam /> */}
+
+               <MeetOurTeam2 />
 
                <ContactUs />
 

@@ -219,17 +219,13 @@ export const timeline = [
 
 export const teammember = [
      {
+          name: "Dr. V. SELVARAJA",
+          work: "Managing Director",
           image: selvaraja,
      },
-     {
-          image: gunasekar,
-     },
+     { name: "Mr. V. GUNASEKAR", work: "Joint Managing Director", image: gunasekar },
 
-     {
-          image: sangeetha,
-     },
+     { name: "Mrs. SANGEETHA PRIYA. S", work: "Director", image: sangeetha },
 
-     {
-          image: sasikala,
-     },
+     { name: "Mrs. SASIKALA. G", work: "Director", image: sasikala },
 ];

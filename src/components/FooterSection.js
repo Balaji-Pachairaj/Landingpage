@@ -44,10 +44,31 @@ const Container = (props) => {
 
 const FooterSection = () => {
      //--------------------------------------------------------
+     const firstSectionRef = useRef();
+
+     const firstSectionUseScroll = useScroll({
+          target: firstSectionRef,
+          offset: ["0 1", "0 0"],
+     });
+
+     const scaleFirstSection = useTransform(
+          firstSectionUseScroll.scrollYProgress,
+          [0, 1],
+          [4, 1]
+     );
+
+     const topFirstSection = useTransform(
+          firstSectionUseScroll.scrollYProgress,
+          [0, 1],
+          ["100%", "0"]
+     );
 
      return (
           <>
-               <div className=" bg-white w-full h-[10rem] font-bold font-poppins text-center border-t-2 pt-4">
+               <div
+                    className=" bg-white w-full h-[10rem] font-bold font-poppins text-center border-t-2 pt-4"
+                    ref={firstSectionRef}
+               >
                     <div className=" w-full flex flex-col text-[24px]">
                          <p>
                               Our culture is rooted in{" "}
@@ -69,74 +90,89 @@ const FooterSection = () => {
                          <p>
                               important change{" "}
                               <span className=" bg-dharangradient text-transparent bg-clip-text">
-                                   globally .{" "}
+                                   globally.{" "}
                               </span>
                          </p>
                     </div>
                </div>
                <div className=" w-full h-[10vh] bg-white"></div>
-               <div className=" flex flex-col bg-white">
-                    <Container>
-                         <div className="  flex flex-row absolute animate-slideleft1">
-                              <FooterCircle />
-                              <SmallBox>
-                                   <FooterText>
-                                        We prioritize integrity
-                                   </FooterText>
-                              </SmallBox>
+               <div className=" w-full overflow-x-hidden">
+                    <motion.div
+                       
+                         className=" flex flex-col bg-white relative"
+                    >
+                         <Container>
+                              <div className="  flex flex-row absolute animate-slideleft1">
+                                   <FooterCircle />
+                                   <SmallBox>
+                                        <FooterText>
+                                             We prioritize integrity
+                                        </FooterText>
+                                   </SmallBox>
 
-                              <FooterCircle />
-                              <SmallBox>
-                                   <FooterText>We are passionate</FooterText>
-                              </SmallBox>
+                                   <FooterCircle />
+                                   <SmallBox>
+                                        <FooterText>
+                                             We are passionate
+                                        </FooterText>
+                                   </SmallBox>
 
-                              <FooterCircle />
-                              <SmallBox>
-                                   <FooterText>We are passionate</FooterText>
-                              </SmallBox>
+                                   <FooterCircle />
+                                   <SmallBox>
+                                        <FooterText>
+                                             We prioritize integrity
+                                        </FooterText>
+                                   </SmallBox>
 
-                              <FooterCircle />
-                              <SmallBox>
-                                   <FooterText>We are passionate</FooterText>
-                              </SmallBox>
+                                   <FooterCircle />
+                                   <SmallBox>
+                                        <FooterText>
+                                             We respect our customers
+                                        </FooterText>
+                                   </SmallBox>
 
-                              <FooterCircle />
-                              <SmallBox>
-                                   <FooterText>We are passionate</FooterText>
-                              </SmallBox>
-                         </div>
-                    </Container>
+                                   <FooterCircle />
+                                   <SmallBox>
+                                        <FooterText>
+                                             Striving Excellence
+                                        </FooterText>
+                                   </SmallBox>
+                              </div>
+                         </Container>
 
-                    <Container>
-                         <div className=" absolute flex flex-row animate-slideright ">
-                              <FooterCircle />
-                              <BigBox>
-                                   <FooterText>
-                                        Empowering Through Innovation
-                                   </FooterText>
-                              </BigBox>
-                              <FooterCircle />{" "}
-                              <SmallBox>
-                                   <FooterText>We are passionate</FooterText>
-                              </SmallBox>
-                              <FooterCircle />
-                              <BigBox>
-                                   <FooterText>
-                                        Empowering Through Innovation
-                                   </FooterText>
-                              </BigBox>
-                              <FooterCircle />
-                              <SmallBox>
-                                   <FooterText>We are passionate</FooterText>
-                              </SmallBox>
-                              <FooterCircle />
-                              <BigBox>
-                                   <FooterText>
-                                        Empowering Through Innovation
-                                   </FooterText>
-                              </BigBox>
-                         </div>
-                    </Container>
+                         <Container>
+                              <div className=" absolute flex flex-row animate-slideright ">
+                                   <FooterCircle />
+                                   <BigBox>
+                                        <FooterText>
+                                             Empowering Through Innovation
+                                        </FooterText>
+                                   </BigBox>
+                                   <FooterCircle />{" "}
+                                   <SmallBox>
+                                        <FooterText>WE ARE HUMANS</FooterText>
+                                   </SmallBox>
+                                   <FooterCircle />
+                                   <BigBox>
+                                        <FooterText>
+                                             We respect our customers
+                                        </FooterText>
+                                   </BigBox>
+                                   <FooterCircle />
+                                   <SmallBox>
+                                        <FooterText>
+                                             We are passionate
+                                        </FooterText>
+                                   </SmallBox>
+                                   <FooterCircle />
+                                   <BigBox>
+                                        <FooterText>
+                                             Empowering Through Innovation
+                                        </FooterText>
+                                   </BigBox>
+                              </div>
+                         </Container>
+                    </motion.div>
                </div>
                <div className=" w-full h-[10vh] bg-white"></div>
                <div className=" w-full md:h-[50vh] h-[80vh] flex flex-col justify-between font-poppins bg-white">

@@ -5,9 +5,9 @@ const EnrichingsectionSmallScreen = () => {
      return (
           <div className=" lg:hidden w-full bg-black"   id = "enrichsmallscreen">
                <div className=" w-full min-h-screen "></div>
-               <div className=" w-full min-h-screen text-white  flex flex-col justify-evenly items-center ">
+               <div className=" w-full min-h-screen text-white  flex flex-col justify-evenly items-center z-[100] ">
                     <div className="w-full h-max">
-                         <p className="  text-[10vw] text-center font-bold  bg-dharangradient text-transparent bg-clip-text">
+                         <p className="  text-[10vw] text-center font-bold bg-whitelight text-transparent bg-clip-text">
                               Enriching Life
                          </p>
                     </div>
@@ -17,12 +17,12 @@ const EnrichingsectionSmallScreen = () => {
                          </div>
                     </div>
                     <div className="w-full h-max">
-                         <p className="  text-[10vw] text-center font-bold  bg-dharangradient text-transparent bg-clip-text">
+                         <p className="  text-[10vw] text-center font-bold  bg-whitelight text-transparent bg-clip-text">
                               Lives
                          </p>
                     </div>
                </div>
-               <div className=" w-full  ps-[10vw] pe-[10vw] text-[5vw] font-bold text-white ">
+               <div className=" w-full  ps-[10vw] pe-[10vw] text-[5vw] font-bold bg-whitelight text-transparent bg-clip-text ">
                     With Transparency, Integrity and Commitment, Dharan elevates
                     the lives of people and brings impact to the world through
                     its universe of companies.

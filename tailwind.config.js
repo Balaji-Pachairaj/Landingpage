@@ -22,6 +22,10 @@ module.exports = {
 
                     whitelight:
                          "linear-gradient(96deg, #FFF -4.79%, rgba(255, 255, 255, 0.35) 98.05%)",
+
+                    meethover:
+                         "linear-gradient(122deg, #27bbae 5%, #7ebe42 92%)",
+                    meetnormal: "#27BBAE ",
                },
 
                fontFamily: {
