@@ -24,7 +24,7 @@ const Meetone = ({ content }) => {
                <div
                     className={`w-full h-[20vw]   cursor-pointer duration-1000 ${
                          hover
-                              ? "bg-meethover bg-opacity-100"
+                              ? " bg-dharangradient bg-opacity-100"
                               : "bg-[#27BBAE] bg-opacity-30"
                     }`}
                ></div>

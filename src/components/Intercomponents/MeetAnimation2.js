@@ -17,7 +17,7 @@ const MeetTwo = ({ content }) => {
           <div
                onMouseEnter={onhover}
                onMouseLeave={offhover}
-               className=" cursor-pointer lg:w-[20vw] md:w-[40%] w-[80%] md:h-[60vw] h-[100vw] flex flex-col justify-end  relative z-[50] bg-transparent" 
+               className=" cursor-pointer lg:w-[20vw] md:w-[40%] w-[80%] md:h-[60vw] h-[100vw] flex flex-col justify-end  relative z-[50] bg-transparent"
           >
                <Image
                     src={content.image}
@@ -28,7 +28,7 @@ const MeetTwo = ({ content }) => {
                <div
                     className={`w-full h-[65%]   cursor-pointer duration-1000 ${
                          hover
-                              ? "bg-meethover bg-opacity-100"
+                              ? " bg-dharangradient bg-opacity-100"
                               : "bg-[#27BBAE] bg-opacity-30"
                     }`}
                ></div>
