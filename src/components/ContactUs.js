@@ -27,7 +27,7 @@ const ContactUs = () => {
                {" "}
                <div
                     id="meetourteam"
-                    className=" w-full h-[40vh] flex flex-col justify-center  bg-white"
+                    className=" w-full h-[40vh] flex flex-col justify-center  bg-[#000]"
                >
                     <h1 className="  bg-dharangradient text-transparent bg-clip-text text-center   flex-shrink-0 lg:text-[6rem] md:text-[6rem] sm:text-[4rem] text-[2rem]   font-[600] ">
                          Let's Contact
@@ -36,7 +36,7 @@ const ContactUs = () => {
                <div
                     id="contact"
                     ref={fullRef}
-                    className=" w-full h-screen bg-white flex flex-col justify-center items-center overflow-hidden z-[50]"
+                    className=" w-full h-screen bg-[#000] flex flex-col justify-center items-center overflow-hidden z-[50]"
                >
                     <motion.div
                          style={{

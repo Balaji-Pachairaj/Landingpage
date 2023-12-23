@@ -284,10 +284,10 @@ const CompaniesSmallScreen = () => {
 
      return (
           <div className=" w-full lg:hidden  ">
-               <div className="w-full sm:h-[50vh] h-[2rem] bg-white "></div>
+               {/* <div className="w-full sm:h-[50vh] h-[2rem] bg-white "></div> */}
                <motion.div
                     style={{
-                         backgroundColor: color,
+                         backgroundColor: "black",
                     }}
                     id="companiessmallscreen"
                     className=" lg:hidden text-center  w-full h-[80vh] flex flex-row justify-center items-center lg:text-[10rem] md:text-[8rem] sm:text-[6rem] text-[3rem] ps-[3%] pe-[3%] "
@@ -299,7 +299,7 @@ const CompaniesSmallScreen = () => {
 
                <motion.div
                     style={{
-                         backgroundColor: color,
+                         backgroundColor: "black",
                     }}
                     className=" w-full gap-[8rem] flex flex-col "
                     ref={fullRef}

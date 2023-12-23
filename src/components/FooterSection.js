@@ -7,13 +7,13 @@ import dharan from "../../public/images/dharan.png";
 import Image from "next/image";
 const FooterCircle = () => {
      return (
-          <div className="   lg:w-[125px] lg:h-[125px] md:w-[100px] md:h-[100px] sm:w-[75px] sm:h-[75px] w-[50px] h-[50px] bg-dharangradient rounded-full"></div>
+          <div className="   lg:w-[125px] lg:h-[125px] md:w-[100px] md:h-[100px] sm:w-[75px] sm:h-[75px] w-[50px] h-[50px] bg-[#fff] rounded-full"></div>
      );
 };
 
 const FooterText = (props) => {
      return (
-          <p className="  bg-dharangradient text-transparent bg-clip-text lg:text-[40px] md:text-[24px] sm:text-[20px] text-[14px] font-Poppins font-bold truncate">
+          <p className="  text-[#fff] lg:text-[40px] md:text-[24px] sm:text-[20px] text-[14px] font-Poppins font-bold truncate">
                {props.children}
           </p>
      );
@@ -21,14 +21,14 @@ const FooterText = (props) => {
 
 const SmallBox = (props) => {
      return (
-          <div className="p-1 lg:w-[700px] md:w-[500px] sm:w-[400px] w-[300px] border-2 border-[#019BA2] rounded-[50px]  flex flex-row justify-center items-center">
+          <div className="p-1 lg:w-[700px] md:w-[500px] sm:w-[400px] w-[300px] border-2 border-[#fff] rounded-[50px]  flex flex-row justify-center items-center">
                {props.children}
           </div>
      );
 };
 const BigBox = (props) => {
      return (
-          <div className="p-1 lg:w-[900px] md:w-[700px] sm:w-[500px] w-[500px] border-2 border-[#019BA2] rounded-[50px]  flex flex-row justify-center items-center">
+          <div className="p-1 lg:w-[900px] md:w-[700px] sm:w-[500px] w-[500px] border-2 border-[#fff] rounded-[50px]  flex flex-row justify-center items-center">
                {props.children}
           </div>
      );
@@ -66,10 +66,10 @@ const FooterSection = () => {
      return (
           <>
                <div
-                    className=" bg-white w-full h-[10rem] font-bold font-poppins text-center border-t-2 pt-4"
+                    className=" bg-[#000] w-full h-[10rem] font-bold font-poppins text-center"
                     ref={firstSectionRef}
                >
-                    <div className=" w-full flex flex-col text-[24px]">
+                    <div className=" w-full flex flex-col text-[24px] text-[#fff]">
                          <p>
                               Our culture is rooted in{" "}
                               <span className=" bg-dharangradient text-transparent bg-clip-text">
@@ -95,12 +95,9 @@ const FooterSection = () => {
                          </p>
                     </div>
                </div>
-               <div className=" w-full h-[10vh] bg-white"></div>
+               <div className=" w-full h-[10vh] bg-[#000]"></div>
                <div className=" w-full overflow-x-hidden">
-                    <motion.div
-                       
-                         className=" flex flex-col bg-white relative"
-                    >
+                    <motion.div className=" flex flex-col bg-[#000] relative">
                          <Container>
                               <div className="  flex flex-row absolute animate-slideleft1">
                                    <FooterCircle />
@@ -174,13 +171,13 @@ const FooterSection = () => {
                          </Container>
                     </motion.div>
                </div>
-               <div className=" w-full h-[10vh] bg-white"></div>
-               <div className=" w-full md:h-[50vh] h-[80vh] flex flex-col justify-between font-poppins bg-white">
+               <div className=" w-full h-[10vh] bg-[#000]"></div>
+               <div className=" w-full md:h-[50vh] h-[80vh] flex flex-col justify-between font-poppins bg-[#000]">
                     <div className=" w-full h-[80%] flex md:flex-row flex-col justify-between items-center">
                          <div className=" md:w-[25%] w-[50%] md:h-full h-[25%] flex flex-col  justify-center items-center relative">
                               <Image src={dharan} fill objectFit="cover" />
                          </div>
-                         <div className=" md:w-[15%] w-[50%] md:h-full h-[25%] flex flex-col  justify-evenly lg:items-start items-center relative text-[24px]">
+                         <div className=" md:w-[15%] w-[50%] md:h-full h-[25%] flex flex-col text-[#fff]  justify-evenly lg:items-start items-center relative text-[24px]">
                               <a
                                    href="#companies"
                                    className="  scroll-m-5"
@@ -209,7 +206,7 @@ const FooterSection = () => {
                                    Our Journey
                               </a>
                          </div>
-                         <div className=" md:w-[15%] w-[50%] md:h-full h-[25%] flex flex-col  justify-evenly lg:items-start items-center relative text-[24px]">
+                         <div className=" md:w-[15%] w-[50%] md:h-full h-[25%] flex flex-col text-[#fff]  justify-evenly lg:items-start items-center relative text-[24px]">
                               <a
                                    href="#meetourteam"
                                    className="  scroll-m-5"
@@ -234,18 +231,18 @@ const FooterSection = () => {
                          <div className=" md:w-[25%] w-[50%] md:h-full h-[25%] flex flex-col  justify-center items-center relative">
                               <div className=" w-full flex flex-row justify-center gap-[1rem]">
                                    <div className=" w-[48px] h-[48px] rounded-[50%]  shadow-socialborder cursor-pointer flex flex-row justify-center items-center">
-                                        <FaFacebookF />
+                                        <FaFacebookF color="white" />
                                    </div>
                                    <div className=" w-[48px] h-[48px] rounded-[50%]  shadow-socialborder cursor-pointer flex flex-row justify-center items-center">
-                                        <FaLinkedinIn />
+                                        <FaLinkedinIn color="white" />
                                    </div>
                                    <div className=" w-[48px] h-[48px] rounded-[50%]  shadow-socialborder cursor-pointer flex flex-row justify-center items-center">
-                                        <FaInstagram />
+                                        <FaInstagram color="white" />
                                    </div>
                               </div>
                          </div>
                     </div>
-                    <div classname="z-[10000] w-full h-[25vh] ps-[20vh]  bg-white text-[24px] text-center ">
+                    <div classname="z-[10000] w-full h-[25vh] ps-[20vh]  text-[#fff] text-[24px] text-center ">
                          <p className=" ps-[10vh]">
                               2023 Dharan Group. All rights reserved
                          </p>

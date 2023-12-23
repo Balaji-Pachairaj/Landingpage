@@ -461,7 +461,7 @@ const Companies = () => {
                     >
                          <motion.div
                               style={{
-                                   backgroundColor: color,
+                                   backgroundColor: "black",
                               }}
                               className=" text-center   pt-[1%] w-full h-full flex flex-row justify-center lg:text-[10rem] md:text-[8rem] sm:text-[6rem] text-[5rem] "
                          >
