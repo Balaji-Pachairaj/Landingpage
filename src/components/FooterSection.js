@@ -242,11 +242,11 @@ const FooterSection = () => {
                               </div>
                          </div>
                     </div>
-                    <div classname="z-[10000] w-full h-[25vh] ps-[20vh]  text-[#fff] text-[24px] text-center ">
-                         <p className=" ps-[10vh]">
-                              2023 Dharan Group. All rights reserved
-                         </p>
-                    </div>
+               </div>
+               <div classname=" w-full h-[25vh] ps-[20vh]   bg-black text-[24px] text-center ">
+                    <p className=" ps-[10vh] text-[#fff]">
+                         2023 Dharan Group. All rights reserved
+                    </p>
                </div>
           </>
      );

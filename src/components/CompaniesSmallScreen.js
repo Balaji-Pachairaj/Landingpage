@@ -3,6 +3,7 @@ import { companies } from "@/asset/companies";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import React, { useRef } from "react";
+import dlogo from "@/asset/dlogoimage.webp";
 
 const SingleCom = ({ src, name, textcolor, link }) => {
      return (
@@ -10,9 +11,11 @@ const SingleCom = ({ src, name, textcolor, link }) => {
                <a
                     href={link}
                     target="blank"
-                    className=" w-[80vw] h-[80vw]  rounded-[10vw]  relative overflow-hidden "
+                    className=" w-[80vw] h-[80vw]  rounded-[10vw]  flex flex-row justify-center items-center overflow-hidden "
                >
-                    <Image src={src} fill objectFit="cover" />
+                    <div className=" w-[50vw] h-[50vw] relative ">
+                         <Image src={dlogo} fill objectFit="cover" />
+                    </div>
                </a>
                <motion.div
                     style={{
@@ -68,7 +71,7 @@ const CompaniesSmallScreen = () => {
                returnvalue = c1 - unitpercentage;
           }
 
-        //  console.log(c1, c2, returnvalue, percentage);
+          //  console.log(c1, c2, returnvalue, percentage);
 
           if (unitpercentage < 0) return 0;
           if (unitpercentage > 256) return 256;
