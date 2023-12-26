@@ -30,13 +30,13 @@ export default function Home() {
 
                <EnrichinglifeSection /> */}
 
-               {/* <FirstSectionVideoSection />
+               <FirstSectionVideoSection />
 
                <ParagraphTextSection />
 
                <div id="companies" className=" w-full h-[0.0001px] "></div>
                <Companies />
-               <CompaniesSmallScreen /> */}
+               <CompaniesSmallScreen />
 
                <Timeline2 />
 
