@@ -8,7 +8,7 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-import dlogo from "@/asset/dlogoimage.webp";
+import dlogo from "@/asset/dlogoimage2.png";
 
 const ImageCom = ({ src }) => {
      const [centerpoint, setCenterPoint] = useState({
@@ -27,6 +27,8 @@ const ImageCom = ({ src }) => {
           bl: 0,
           br: 0,
      });
+
+     const [xy, setXY] = useState({ x: 0, y: 0 });
 
      const fullRef = useRef();
 
@@ -111,6 +113,7 @@ const ImageCom = ({ src }) => {
      // console.log(fullRef.getBoundingClient())
 
      //console.log(x - centerpoint.x  , y - centerpoint.y , x , y )
+     // console.log(hoverOn);
 
      return (
           <div className="w-full h-full relative">
@@ -120,22 +123,35 @@ const ImageCom = ({ src }) => {
                >
                     <motion.div
                          style={{
-                              x: x ? x - centerpoint.x : x,
-                              y: y ? y - centerpoint.y : y,
+                              x: xy.x ? xy.x - centerpoint.x : xy.x,
+                              y: xy.y ? xy.y - centerpoint.y : xy.y,
                          }}
-                         className="  w-[75%] h-[75%]  relative duration-500 "
+                         className="  w-[75%] h-[75%] z-[12]   relative duration-500 "
                     >
                          <Image src={src} fill objectFit="cover" />
                     </motion.div>
                </div>
                <div
                     onMouseEnter={() => {
+                         // console.log("on");
                          setHoverOn(true);
                     }}
                     onMouseLeave={() => {
+                         // console.log("off");
                          setHoverOn(false);
+                         setXY({
+                              x: 0,
+                              y: 0,
+                         });
                     }}
-                    className=" w-[110%] h-[110%] absolute bottom-0 left-0  z-50  "
+                    onMouseMoveCapture={() => {
+                         console.log("it");
+                         setXY({
+                              x: position.x,
+                              y: position.y,
+                         });
+                    }}
+                    className=" w-[110%] h-[110%] absolute bottom-0 left-0 z-[100000] "
                ></div>
           </div>
      );

@@ -3,7 +3,7 @@ import { companies } from "@/asset/companies";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import React, { useRef } from "react";
-import dlogo from "@/asset/dlogoimage.webp";
+import dlogo from "@/asset/dlogoimage2.png";
 
 const SingleCom = ({ src, name, textcolor, link }) => {
      return (

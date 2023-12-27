@@ -3,26 +3,27 @@ import Image from "next/image";
 import React, { useRef } from "react";
 import { dharan, teammember } from "@/asset/companies";
 import dlogo from "../../public/images/dharan.png";
+import TextOurTeamCom from "./Intercomponents/TextOurTeamCom";
 
-const TextOurTeamCom = () => {
-     return (
-          <div className=" w-full h-[50vh] flex flex-col justify-center  ">
-               <div className=" w-full h-fit flex flex-row justify-center  ">
-                    <div className=" flex flex-row gap-2 text-[11vw] justify-center  font-poppins font-[600] text-center    ">
-                         <h1 className="backgroundcss">O</h1>
-                         <h1 className="backgroundcss">U</h1>
-                         <h1 className="backgroundcss">R</h1>
-                    </div>
-                    <div className=" flex flex-row gap-2 text-[11vw] justify-center  font-poppins font-[600] text-center    ">
-                         <h1 className="backgroundcss">T</h1>
-                         <h1 className="backgroundcss">E</h1>
-                         <h1 className="backgroundcss">A</h1>
-                         <h1 className="backgroundcss">M</h1>
-                    </div>
-               </div>
-          </div>
-     );
-};
+// export const TextOurTeamCom = () => {
+//      return (
+//           <div className=" w-full h-[50vh] flex flex-col justify-center  ">
+//                <div className=" w-full h-fit flex flex-row justify-center  ">
+//                     <div className=" flex flex-row gap-2 text-[11vw] justify-center  font-poppins font-[600] text-center    ">
+//                          <h1 className="backgroundcss">O</h1>
+//                          <h1 className="backgroundcss">U</h1>
+//                          <h1 className="backgroundcss">R</h1>
+//                     </div>
+//                     <div className=" flex flex-row gap-2 text-[11vw] justify-center  font-poppins font-[600] text-center    ">
+//                          <h1 className="backgroundcss">T</h1>
+//                          <h1 className="backgroundcss">E</h1>
+//                          <h1 className="backgroundcss">A</h1>
+//                          <h1 className="backgroundcss">M</h1>
+//                     </div>
+//                </div>
+//           </div>
+//      );
+// };
 
 const ImageComponents = ({ team }) => {
      return (
@@ -256,8 +257,10 @@ const MeetOurTeam3 = () => {
 
      return (
           <>
-               <TextOurTeamCom />
-               <div ref={fullRef} className=" w-full min-h-screen ">
+               <div
+                    ref={fullRef}
+                    className=" w-full min-h-screen lg:block hidden "
+               >
                     <div className=" w-full h-[50vh] "></div>
                     <div className=" w-full h-[50vh] "></div>
 
@@ -274,7 +277,10 @@ const MeetOurTeam3 = () => {
                     <div className=" w-full h-[50vh] "></div>
                </div>
 
-               <div ref={lastRef} className=" w-full h-screen "></div>
+               <div
+                    ref={lastRef}
+                    className=" w-full h-screen lg:block hidden "
+               ></div>
                <motion.div
                     style={{
                          top: topSection1,
@@ -325,20 +331,6 @@ const MeetOurTeam3 = () => {
                </motion.div>
 
                {/* ----------------------------------------------------------------------------- */}
-
-               <motion.div
-                    style={{
-                         top: topSection5,
-                         x: "-50%",
-                         y: "-50%",
-                         scale: scaleSection5,
-                         left: leftSection5,
-                    }}
-                    className=" xl:w-[200px] xl:h-[285px] lg:w-[150px] lg:h-[215px] bg-red-500 fixed rounded-[15px] overflow-hidden"
-               >
-                    {" "}
-                    <ImageComponents team={teammember[2]} />
-               </motion.div>
                <motion.div
                     style={{
                          top: topSection6,
@@ -352,6 +344,20 @@ const MeetOurTeam3 = () => {
                     {" "}
                     <ImageComponents team={teammember[0]} />
                </motion.div>
+               <motion.div
+                    style={{
+                         top: topSection5,
+                         x: "-50%",
+                         y: "-50%",
+                         scale: scaleSection5,
+                         left: leftSection5,
+                    }}
+                    className=" xl:w-[200px] xl:h-[285px] lg:w-[150px] lg:h-[215px] bg-red-500 fixed rounded-[15px] overflow-hidden"
+               >
+                    {" "}
+                    <ImageComponents team={teammember[2]} />
+               </motion.div>
+
                <motion.div
                     style={{
                          top: topSection7,

@@ -208,7 +208,7 @@ const FooterSection = () => {
                          </div>
                          <div className=" md:w-[15%] w-[50%] md:h-full h-[25%] flex flex-col text-[#fff]  justify-evenly lg:items-start items-center relative text-[24px]">
                               <a
-                                   href="#meetourteam"
+                                   href="#ourteam"
                                    className="  scroll-m-5"
                                    style={{
                                         transition: " scroll-behavior 0.3s",
