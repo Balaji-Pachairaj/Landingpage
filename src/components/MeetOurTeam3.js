@@ -1,7 +1,7 @@
 import { motion, useScroll, useTime, useTransform } from "framer-motion";
 import Image from "next/image";
 import React, { useRef } from "react";
-import { teammember } from "@/asset/companies";
+import { dharan, teammember } from "@/asset/companies";
 import dlogo from "../../public/images/dharan.png";
 
 const TextOurTeamCom = () => {
@@ -378,7 +378,7 @@ const MeetOurTeam3 = () => {
                     {" "}
                     <ImageComponents
                          team={{
-                              image: dlogo,
+                              image: dharan.image,
                          }}
                     />
                </motion.div>
@@ -391,7 +391,7 @@ const MeetOurTeam3 = () => {
                     className=" w-[300px]  h-[285px] fixed rounded-[15px] overflow-hidden"
                >
                     <h1 className=" text-[4vw] leading-[4.2vw] text-[#fff]">
-                         lorem 50 % balj kin nnsk k kme nsnf sak
+                         Eniriching Lives
                     </h1>
                </motion.div>
           </>

@@ -11,12 +11,24 @@ import React, { useEffect, useRef, useState } from "react";
 import dlogo from "@/asset/dlogoimage.webp";
 
 const ImageCom = ({ src }) => {
+     const [centerpoint, setCenterPoint] = useState({
+          x: 0,
+          y: 0,
+     });
+
      const [position, setPostion] = useState({
           x: 0,
           y: 0,
      });
 
-     const controls = useDragControls();
+     const [hitAbleRange, setHitAbleRange] = useState({
+          tr: 0,
+          tl: 0,
+          bl: 0,
+          br: 0,
+     });
+
+     const fullRef = useRef();
 
      // const [postionOnMouseHover, setPostionOnMouseHover] = useState({
      //      x: 0,
@@ -25,7 +37,7 @@ const ImageCom = ({ src }) => {
 
      const [hoverOn, setHoverOn] = useState(true);
 
-     console.log(position, hoverOn);
+     // console.log(position, hoverOn);
      useEffect(() => {
           const mouseMOve = (e) => {
                if (hoverOn) {
@@ -48,33 +60,83 @@ const ImageCom = ({ src }) => {
 
           window.addEventListener("mousemove", mouseMOve);
 
+          console.log(window.screen.width, window.screen.height);
+
+          const boxHeight = (window.screen.height * 81) / 100;
+
+          const size = (window.screen.height * 25) / 100;
+
+          const center = {
+               x: window.screen.width / 2,
+               y: window.screen.height / 2,
+          };
+
+          console.log(boxHeight, center);
+
+          setCenterPoint(center);
+          setHitAbleRange({
+               tl: center.x - size,
+               tr: center.x + size,
+               bl: center.y - size - 100,
+               br: center.y + size + 100,
+          });
+
+          console.log({
+               tl: center.x - size,
+               tr: center.x + size,
+               bl: center.y - size - 100,
+               br: center.y + size + 100,
+          });
+
           return () => {
                window.removeEventListener("mousemove", mouseMOve);
           };
      }, []);
 
+     let x = 0;
+     let y = 0;
+     if (
+          // hitAbleRange.tl < position.x &&
+          // hitAbleRange.tr > position.x &&
+          // hitAbleRange.bl < position.y &&
+          // hitAbleRange.br > position.y &&
+          hoverOn
+     ) {
+          x = position.x;
+          y = position.y;
+     }
+
+     //console.log(position, hitAbleRange);
+
+     // console.log(fullRef.getBoundingClient())
+
+     //console.log(x - centerpoint.x  , y - centerpoint.y , x , y )
+
      return (
-          <div className=" w-full h-full flex flex-row justify-center items-center relative">
-               <motion.div
-                    style={{
-                         x: position.x + "px",
-                         y: position.y + "px",
-                    }}
-                    drag="x"
-                    dragControls={controls}
-                    className="  w-[75%] h-[75%] relative "
+          <div className="w-full h-full relative">
+               <div
+                    className=" w-full h-full flex flex-row justify-center items-center relative overflow-visible "
+                    ref={fullRef}
                >
-                    <Image src={src} fill objectFit="cover" />
-               </motion.div>
-               {/* <div
+                    <motion.div
+                         style={{
+                              x: x ? x - centerpoint.x : x,
+                              y: y ? y - centerpoint.y : y,
+                         }}
+                         className="  w-[75%] h-[75%]  relative duration-500 "
+                    >
+                         <Image src={src} fill objectFit="cover" />
+                    </motion.div>
+               </div>
+               <div
                     onMouseEnter={() => {
                          setHoverOn(true);
                     }}
                     onMouseLeave={() => {
                          setHoverOn(false);
                     }}
-                    className=" w-full h-full absolute  z-50 border-2 "
-               ></div> */}
+                    className=" w-[110%] h-[110%] absolute bottom-0 left-0  z-50  "
+               ></div>
           </div>
      );
 };
@@ -117,7 +179,7 @@ const Companies = () => {
      const imagetopFirst = useTransform(
           firstComUseScroll.scrollYProgress,
           [0, 1],
-          ["100%", "-100%"]
+          ["150%", "-150%"]
      );
 
      const detailfirstCom = useTransform(
@@ -143,7 +205,7 @@ const Companies = () => {
      const imagetopsecond = useTransform(
           secondComUseScroll.scrollYProgress,
           [0, 1],
-          ["100%", "-100%"]
+          ["150%", "-150%"]
      );
 
      const detailsecondCom = useTransform(
@@ -168,7 +230,7 @@ const Companies = () => {
      const imagetopthird = useTransform(
           thirdComUseScroll.scrollYProgress,
           [0, 1],
-          ["100%", "-100%"]
+          ["150%", "-150%"]
      );
 
      const detailthirdCom = useTransform(
@@ -194,7 +256,7 @@ const Companies = () => {
      const imagetopfourth = useTransform(
           fourthComUseScroll.scrollYProgress,
           [0, 1],
-          ["100%", "-100%"]
+          ["150%", "-150%"]
      );
 
      const titlefourthCom = useTransform(
@@ -216,7 +278,7 @@ const Companies = () => {
      const imagetopfiveth = useTransform(
           fivethComUseScroll.scrollYProgress,
           [0, 1],
-          ["100%", "-100%"]
+          ["150%", "-150%"]
      );
 
      const titlefivethCom = useTransform(
@@ -238,7 +300,7 @@ const Companies = () => {
      const imagetopsixth = useTransform(
           sixthComUseScroll.scrollYProgress,
           [0, 1],
-          ["100%", "-100%"]
+          ["150%", "-150%"]
      );
 
      const titlesixthCom = useTransform(
@@ -260,7 +322,7 @@ const Companies = () => {
      const imagetopseventh = useTransform(
           seventhComUseScroll.scrollYProgress,
           [0, 1],
-          ["100%", "-100%"]
+          ["150%", "-150%"]
      );
 
      const titleseventhCom = useTransform(
@@ -562,8 +624,13 @@ const Companies = () => {
                                         left: "50%",
                                         x: "-50%",
                                    }}
-                                   className=" w-[81vh] h-[81vh] flex flex-row justify-center items-center rounded-[10vh] fixed overflow-hidden z-[8]"
+                                   className=" w-[81vh] h-[81vh]  flex flex-row justify-center items-center overflow-visible rounded-[10vh] fixed  z-[8]"
                               >
+                                   {/* <Image
+                                        src={companies[0].image}
+                                        fill
+                                        objectFit="cover"
+                                   /> */}
                                    <ImageCom src={dlogo} />
                               </motion.a>
 
@@ -578,7 +645,7 @@ const Companies = () => {
                                    style={{
                                         left: titlefirstCom,
                                    }}
-                                   className=" w-full h-[60vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
+                                   className=" w-full h-[60vh] fixed top-[50%] z-[7]  flex flex-col gap-[0rem] justify-center items-center"
                               >
                                    <p className=" text-white lg:text-[3rem] md:text-[2.5rem] font-semibold capitalize ">
                                         {companies[0].name}
@@ -599,13 +666,16 @@ const Companies = () => {
                                         left: "50%",
                                         x: "-50%",
                                    }}
-                                   className=" w-[81vh] h-[81vh]  rounded-[10vh] fixed overflow-hidden z-[8]"
+                                   className=" w-[81vh] h-[81vh]   rounded-[10vh]  overflow-visible fixed z-[8]"
                               >
-                                   <Image
-                                        src={companies[1].image}
+                                   {/* <Image
+                                        src={companies[0].image}
                                         fill
                                         objectFit="cover"
-                                   />
+                                   /> */}
+                                   <ImageCom src={dlogo} />
+
+                                   {/* <ImageCom src={dlogo} /> */}
                               </motion.a>
 
                               {/* <motion.div
@@ -625,7 +695,7 @@ const Companies = () => {
                                    style={{
                                         left: titlesecondCom,
                                    }}
-                                   className=" w-full h-[60vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
+                                   className=" w-full h-[60vh] fixed top-[50%] z-[7]  flex flex-col gap-[0rem] justify-center items-center"
                               >
                                    <p className=" text-white lg:text-[3rem] md:text-[2.5rem] font-semibold capitalize ">
                                         {companies[1].name}
@@ -646,13 +716,14 @@ const Companies = () => {
                                         left: "50%",
                                         x: "-50%",
                                    }}
-                                   className=" w-[81vh] h-[81vh]  rounded-[10vh] fixed overflow-hidden z-[8]"
+                                   className=" w-[81vh] h-[81vh]   rounded-[10vh] fixed overflow-visible z-[8]"
                               >
-                                   <Image
-                                        src={companies[2].image}
+                                   {/* <Image
+                                        src={companies[0].image}
                                         fill
                                         objectFit="cover"
-                                   />
+                                   /> */}
+                                   <ImageCom src={dlogo} />
                               </motion.a>
 
                               {/* <motion.div
@@ -672,7 +743,7 @@ const Companies = () => {
                                    style={{
                                         left: titlethirdCom,
                                    }}
-                                   className=" w-full h-[60vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
+                                   className=" w-full h-[60vh] fixed top-[50%] z-[7]  flex flex-col gap-[0rem] justify-center items-center"
                               >
                                    <p className="  text-white lg:text-[3rem] md:text-[2.5rem] font-semibold capitalize ">
                                         {companies[2].name}
@@ -693,20 +764,21 @@ const Companies = () => {
                                         left: "50%",
                                         x: "-50%",
                                    }}
-                                   className=" w-[81vh] h-[81vh]  rounded-[10vh] fixed overflow-hidden z-[8]"
+                                   className=" w-[81vh] h-[81vh]   rounded-[10vh] fixed overflow-visible z-[8]"
                               >
-                                   <Image
-                                        src={companies[3].image}
+                                   {/* <Image
+                                        src={companies[0].image}
                                         fill
                                         objectFit="cover"
-                                   />
+                                   /> */}
+                                   <ImageCom src={dlogo} />
                               </motion.a>
 
                               <motion.div
                                    style={{
                                         left: titlefourthCom,
                                    }}
-                                   className=" w-full h-[60vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
+                                   className=" w-full h-[60vh] fixed top-[50%] z-[7]  flex flex-col gap-[0rem] justify-center items-center"
                               >
                                    <p className=" text-white lg:text-[3rem] md:text-[2.5rem] font-semibold capitalize ">
                                         {companies[3].name}
@@ -726,20 +798,21 @@ const Companies = () => {
                                         left: "50%",
                                         x: "-50%",
                                    }}
-                                   className=" w-[81vh] h-[81vh]  rounded-[10vh] fixed overflow-hidden z-[8]"
+                                   className=" w-[81vh] h-[81vh]   rounded-[10vh] fixed  overflow-visible z-[8]"
                               >
-                                   <Image
-                                        src={companies[4].image}
+                                   {/* <Image
+                                        src={companies[0].image}
                                         fill
                                         objectFit="cover"
-                                   />
+                                   /> */}
+                                   <ImageCom src={dlogo} />
                               </motion.a>
 
                               <motion.div
                                    style={{
                                         left: titlefivethCom,
                                    }}
-                                   className=" w-full h-[60vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
+                                   className=" w-full h-[60vh] fixed top-[50%] z-[7]  flex flex-col gap-[0rem] justify-center items-center"
                               >
                                    <p className="   text-white lg:text-[3rem] md:text-[2.5rem] font-semibold capitalize ">
                                         {companies[4].name}
@@ -759,20 +832,21 @@ const Companies = () => {
                                         left: "50%",
                                         x: "-50%",
                                    }}
-                                   className=" w-[81vh] h-[81vh]  rounded-[10vh] fixed overflow-hidden z-[8]"
+                                   className=" w-[81vh] h-[81vh]   rounded-[10vh] fixed overflow-visible z-[8]"
                               >
-                                   <Image
-                                        src={companies[5].image}
+                                   {/* <Image
+                                        src={companies[0].image}
                                         fill
                                         objectFit="cover"
-                                   />
+                                   /> */}
+                                   <ImageCom src={dlogo} />
                               </motion.a>
 
                               <motion.div
                                    style={{
                                         left: titlesixthCom,
                                    }}
-                                   className=" w-full h-[60vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
+                                   className=" w-full h-[60vh] fixed top-[50%] z-[7]  flex flex-col gap-[0rem] justify-center items-center"
                               >
                                    <p className=" text-white lg:text-[3rem] md:text-[2.5rem] font-semibold capitalize ">
                                         {companies[5].name}
@@ -792,20 +866,21 @@ const Companies = () => {
                                         left: "50%",
                                         x: "-50%",
                                    }}
-                                   className=" w-[81vh] h-[81vh]  rounded-[10vh] fixed overflow-hidden z-[8]"
+                                   className=" w-[81vh] h-[81vh]   rounded-[10vh] fixed overflow-visible z-[8]"
                               >
-                                   <Image
-                                        src={companies[6].image}
+                                   {/* <Image
+                                        src={companies[0].image}
                                         fill
                                         objectFit="cover"
-                                   />
+                                   /> */}
+                                   <ImageCom src={dlogo} />
                               </motion.a>
 
                               <motion.div
                                    style={{
                                         left: titleseventhCom,
                                    }}
-                                   className=" w-full h-[60vh] fixed top-[50%] z-[9]  flex flex-col gap-[0rem] justify-center items-center"
+                                   className=" w-full h-[60vh] fixed top-[50%] z-[7]  flex flex-col gap-[0rem] justify-center items-center"
                               >
                                    <p className=" text-white lg:text-[3rem] md:text-[2.5rem] font-semibold capitalize ">
                                         {companies[6].name}

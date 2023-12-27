@@ -24,6 +24,12 @@ import sangeetha from "../../public/team/sangeetha.png";
 import sasikala from "../../public/team/sasikala.png";
 import selvaraja from "../../public/team/selvaraja.png";
 
+import sasikala2 from "@/asset/team/sasikala.jpeg";
+import selvaraja2 from "@/asset/team/selvaraja.jpeg";
+import sangeetha2 from "@/asset/team/sangeetha.jpeg";
+import gunasekar2 from "@/asset/team/gunasekar.jpeg";
+import dlogo from "@/asset/team/dlogo.jpeg";
+
 export const companies = [
      {
           name: "PROVIDING COMPASSIONATE CARE",
@@ -221,11 +227,19 @@ export const teammember = [
      {
           name: "Dr. V. SELVARAJA",
           work: "Managing Director",
-          image: selvaraja,
+          image: selvaraja2,
      },
-     { name: "Mr. V. GUNASEKAR", work: "Joint Managing Director", image: gunasekar },
+     {
+          name: "Mr. V. GUNASEKAR",
+          work: "Joint Managing Director",
+          image: gunasekar2,
+     },
 
-     { name: "Mrs. SANGEETHA PRIYA. S", work: "Director", image: sangeetha },
+     { name: "Mrs. SANGEETHA PRIYA. S", work: "Director", image: sangeetha2 },
 
-     { name: "Mrs. SASIKALA. G", work: "Director", image: sasikala },
+     { name: "Mrs. SASIKALA. G", work: "Director", image: sasikala2 },
 ];
+
+export const dharan = {
+     image: dlogo,
+};

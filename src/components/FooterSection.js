@@ -3,11 +3,11 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import { FaFacebookF } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
-import dharan from "../../public/images/dharan.png";
+import dharan from "@/asset/footerdharanlogo.png";
 import Image from "next/image";
 const FooterCircle = () => {
      return (
-          <div className="   lg:w-[125px] lg:h-[125px] md:w-[100px] md:h-[100px] sm:w-[75px] sm:h-[75px] w-[50px] h-[50px] bg-[#fff] rounded-full"></div>
+          <div className="   lg:w-[125px] lg:h-[125px] md:w-[100px] md:h-[100px] sm:w-[75px] sm:h-[75px] w-[50px] h-[50px] bg-dharangradient rounded-full"></div>
      );
 };
 
@@ -21,14 +21,14 @@ const FooterText = (props) => {
 
 const SmallBox = (props) => {
      return (
-          <div className="p-1 lg:w-[700px] md:w-[500px] sm:w-[400px] w-[300px] border-2 border-[#fff] rounded-[50px]  flex flex-row justify-center items-center">
+          <div className="p-1 lg:w-[700px] md:w-[500px] sm:w-[400px] w-[300px] border-2  border-gradientcolor rounded-[50px]   flex flex-row justify-center items-center">
                {props.children}
           </div>
      );
 };
 const BigBox = (props) => {
      return (
-          <div className="p-1 lg:w-[900px] md:w-[700px] sm:w-[500px] w-[500px] border-2 border-[#fff] rounded-[50px]  flex flex-row justify-center items-center">
+          <div className="p-1 lg:w-[900px] md:w-[700px] sm:w-[500px] w-[500px] border-2 border-gradientcolor rounded-[50px]  flex flex-row justify-center items-center">
                {props.children}
           </div>
      );
@@ -174,10 +174,10 @@ const FooterSection = () => {
                <div className=" w-full h-[10vh] bg-[#000]"></div>
                <div className=" w-full md:h-[50vh] h-[80vh] flex flex-col justify-between font-poppins bg-[#000]">
                     <div className=" w-full h-[80%] flex md:flex-row flex-col justify-between items-center">
-                         <div className=" md:w-[25%] w-[50%] md:h-full h-[25%] flex flex-col  justify-center items-center relative">
-                              <Image src={dharan} fill objectFit="cover" />
+                         <div className=" md:w-[25%]  w-[50%] md:h-[75%] h-[25%] flex flex-col  justify-center items-center relative">
+                              <Image src={dharan} width="280px" height="300px" />
                          </div>
-                         <div className=" md:w-[15%] w-[50%] md:h-full h-[25%] flex flex-col text-[#fff]  justify-evenly lg:items-start items-center relative text-[24px]">
+                         <div className=" md:w-[15%]  w-[50%] md:h-full h-[25%] flex flex-col text-[#fff]  justify-evenly lg:items-start items-center relative text-[24px]">
                               <a
                                    href="#companies"
                                    className="  scroll-m-5"
