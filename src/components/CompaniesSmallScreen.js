@@ -14,7 +14,7 @@ const SingleCom = ({ src, name, textcolor, link }) => {
                     className=" w-[80vw] h-[80vw]  rounded-[10vw]  flex flex-row justify-center items-center overflow-hidden "
                >
                     <div className=" w-[50vw] h-[50vw] relative ">
-                         <Image src={dlogo} fill objectFit="cover" />
+                         <Image src={src} fill objectFit="cover" />
                     </div>
                </a>
                <motion.div

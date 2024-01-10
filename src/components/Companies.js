@@ -647,7 +647,7 @@ const Companies = () => {
                                         fill
                                         objectFit="cover"
                                    /> */}
-                                   <ImageCom src={dlogo} />
+                                   <ImageCom src={companies[0].image} />
                               </motion.a>
 
                               {/* <motion.div
@@ -689,7 +689,7 @@ const Companies = () => {
                                         fill
                                         objectFit="cover"
                                    /> */}
-                                   <ImageCom src={dlogo} />
+                                   <ImageCom src={companies[1].image} />
 
                                    {/* <ImageCom src={dlogo} /> */}
                               </motion.a>
@@ -739,7 +739,7 @@ const Companies = () => {
                                         fill
                                         objectFit="cover"
                                    /> */}
-                                   <ImageCom src={dlogo} />
+                                   <ImageCom src={companies[2].image} />
                               </motion.a>
 
                               {/* <motion.div
@@ -787,7 +787,7 @@ const Companies = () => {
                                         fill
                                         objectFit="cover"
                                    /> */}
-                                   <ImageCom src={dlogo} />
+                                   <ImageCom src={companies[3].image} />
                               </motion.a>
 
                               <motion.div
@@ -821,7 +821,7 @@ const Companies = () => {
                                         fill
                                         objectFit="cover"
                                    /> */}
-                                   <ImageCom src={dlogo} />
+                                   <ImageCom src={companies[4].image} />
                               </motion.a>
 
                               <motion.div
@@ -855,7 +855,7 @@ const Companies = () => {
                                         fill
                                         objectFit="cover"
                                    /> */}
-                                   <ImageCom src={dlogo} />
+                                   <ImageCom src={companies[5].image} />
                               </motion.a>
 
                               <motion.div
@@ -889,7 +889,7 @@ const Companies = () => {
                                         fill
                                         objectFit="cover"
                                    /> */}
-                                   <ImageCom src={dlogo} />
+                                   <ImageCom src={companies[6].image} />
                               </motion.a>
 
                               <motion.div

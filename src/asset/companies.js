@@ -19,6 +19,12 @@ import timeLine2020one from "../../public/timeline/timeline-2020-1.png";
 import timeLine202015one from "../../public/timeline/timeline-2020-15-1.jpg";
 import timeLine202015two from "../../public/timeline/timeline-2020-15-2.jpg";
 
+import logo1 from "../asset/logo/logo1.png";
+import logo2 from "../asset/logo/logo2.png";
+import logo3 from "../asset/logo/logo3.png";
+import logo4 from "../asset/logo/logo4.png";
+import logo5 from "../asset/logo/logo5.png";
+
 import gunasekar from "../../public/team/gunasekar.png";
 import sangeetha from "../../public/team/sangeetha.png";
 import sasikala from "../../public/team/sasikala.png";
@@ -33,28 +39,28 @@ import dlogo from "@/asset/team/dlogo.jpeg";
 export const companies = [
      {
           name: "PROVIDING COMPASSIONATE CARE",
-          image: hospitals,
+          image: logo1,
           color: [99, 216, 140],
           textcolor: "white",
           link: "https://www.dharanhospital.com/",
      },
      {
           name: "EXCELLENT CARE TO WOMEN OF ALL AGES",
-          image: womencare,
+          image: logo2,
           color: [241, 149, 193],
           textcolor: "white",
           link: "https://www.dharanhospital.com/womenscare/",
      },
      {
           name: "BUILDING TOMORROW'S HEALTHCARE LEADERS",
-          image: healthinsitutes,
+          image: logo4,
           color: [37, 37, 37],
           textcolor: "white",
           link: "https://www.dharanhospital.com/educational-activities.php",
      },
      {
           name: "PROVIDING HOPE AND HEALING",
-          image: cancer,
+          image: logo3,
           color: [241, 149, 193],
           textcolor: "white",
           link: "https://www.dharanhospital.com/cancercare/",
@@ -62,7 +68,7 @@ export const companies = [
 
      {
           name: "PREMIUM SHOWROOM FOR YOUR HOME NEEDS",
-          image: naturalstone,
+          image: logo5,
           // color: [0, 189, 148],
           color: [37, 37, 37],
           textcolor: "white",
@@ -70,14 +76,14 @@ export const companies = [
      },
      {
           name: "LEADING EXPORTERS OF ROCKLEADING",
-          image: rock,
+          image: logo3,
           color: [99, 216, 140],
           textcolor: "white",
           link: "https://www.dharanrock.com/",
      },
      {
           name: "ECONOMIC SHOWROOM FOR YOUR HOME NEEDS",
-          image: ceramic,
+          image: logo4,
           // color: [0, 0, 0],
           color: [37, 37, 37],
           textcolor: "white",
